@@ -115,11 +115,11 @@ for item in panel.panels:
 print('Images:',len(images),'inventory chars:',len('\n'.join(lines)),'raw visible text:',len(visible))
 try:
  from PIL import Image, ImageDraw
- files=list(out.glob('image-*.jpg'))+list(out.glob('image-*.png'))+list(out.glob('image-*.webp'))
+ files=list(out.glob('image-*.jpg'))+list(out.glob('image-*.png'))+list(out.glob('image-*.webp'))+list(out.glob('image-*.svg'))
  tiles=[]
  for f in sorted(files):
   try:
-   im=Image.open(f).convert('RGB');im.thumbnail((310,190))
+   \n   if f.suffix=='.svg':\n    import cairosvg\n    im=Image.open(io.BytesIO(cairosvg.svg2png(url=str(f),output_width=480))).convert('RGBA')\n    backdrop=Image.new('RGBA',im.size,(235,227,206,255));backdrop.alpha_composite(im);im=backdrop.convert('RGB')\n   else: im=Image.open(f).convert('RGB')\n   im.thumbnail((310,190))
    tiles.append((f,im.copy()))
   except Exception as ex:print('image failed',f,ex)
  for page in range(0,len(tiles),24):
