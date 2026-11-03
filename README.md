@@ -20,7 +20,7 @@ Both HTML pages are self-contained: illustrations, styles, scripts and challenge
 - Chapter IV — The City Behind the Wall
 - Chapter V — The Hour You Choose ([read the new finale](chapter-five.html))
 
-The existing illustrated graphic novel remains unchanged in `index.html`. A new standalone Chapter V interpretation has been added with an optional interactive decision and birthday reveal. Because the original HTML is about 3.3 MB and could not be fully retrieved through the connector, **this release has not been integrated or continuity-checked against every scene in `index.html`**. Use the direct Chapter V link above. Progress for this page is stored locally in the reader's browser.
+The existing illustrated graphic novel remains unchanged in `index.html`. A standalone Chapter V interpretation has been added with an optional recap, an interactive decision, scene navigation, and a birthday reveal that opens only after the reader continues past the decision. The post-credits scene opens with the reveal. Because the original HTML is about 3.3 MB and could not be fully retrieved through the connector, **this release has not been integrated or continuity-checked against every scene in `index.html`**. Use the direct Chapter V link above. Progress for this page is stored locally in the reader's browser.
 
 ### Edit and publish
 
@@ -31,7 +31,7 @@ The artwork includes original anime-inspired character studies. Dhanu's name is 
 ### Implementation notes
 
 - Two self-contained static HTML pages; no build commands
-- Accessible button controls and optional skip paths
+- Accessible button controls, a Chapter V recap, and a choice-gated finale
 - Mobile reading layout and responsive desktop view
 - Reduced-motion-aware animations
 - Existing Chapter I–III progress keys preserved across updates
