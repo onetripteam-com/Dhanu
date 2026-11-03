@@ -77,6 +77,41 @@ lines+=['','## Dialogue excerpts','']
 lines+=['- '+x[:400] for x in data['dialogue_like'][:120]]
 lines+=['','## Duplicate IDs','',str(data['id_duplicates'])]
 (out/'inventory.md').write_text('\n'.join(lines),encoding='utf-8')
+
+# Extract image alt text, panel captions and immediate textual framing.
+class PanelParser(HTMLParser):
+ def __init__(self):
+  super().__init__(convert_charrefs=True)
+  self.current=None;self.panels=[];self.depth=0;self.capture_caption=False
+ def handle_starttag(self,tag,attrs):
+  d=dict(attrs)
+  if tag=='figure':
+   if self.current is None:
+    self.current=dict(number=len(self.panels)+1,figure_class=d.get('class',''),images=[],caption='')
+    self.depth=1
+   else:self.depth+=1
+  elif self.current is not None:
+   if tag=='img':
+    src=d.get('src','')
+    match=re.search(r'data:image/[^,]+,([A-Za-z0-9+/=]+)',src)
+    sha=hashlib.sha1(src.encode()).hexdigest()[:12] if src else ''
+    self.current['images'].append(dict(alt=d.get('alt',''),class_name=d.get('class',''),style=d.get('style',''),sha=sha))
+   if tag=='figcaption':self.capture_caption=True
+ def handle_endtag(self,tag):
+  if tag=='figcaption':self.capture_caption=False
+  if tag=='figure' and self.current is not None:
+   self.depth-=1
+   if self.depth==0:self.panels.append(self.current);self.current=None
+ def handle_data(self,content):
+  if self.current is not None and self.capture_caption:self.current['caption']+=re.sub(r'\\s+',' ',content).strip()+' '
+panel=PanelParser();panel.feed(raw)
+panel_md=['# Visual scene and caption inventory','',f'Figures: {len(panel.panels)}','']
+for item in panel.panels:
+ panel_md += [f'## Panel {item["number"]} / {item["figure_class"]}',f'Caption: {item["caption"][:700]}']
+ for im in item['images']:panel_md.append('Image '+json.dumps(im,ensure_ascii=False))
+ panel_md.append('')
+(out/'panels.md').write_text('\\n'.join(panel_md),encoding='utf-8')
+
 print('Images:',len(images),'inventory chars:',len('\n'.join(lines)),'raw visible text:',len(visible))
 try:
  from PIL import Image, ImageDraw
