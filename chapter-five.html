@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#091322"><meta name="description" content="The final chapter of MANIFESTO — The Missing Minute, an original birthday story for Dhanu.">
+<title>MANIFESTO · Chapter V — The Hour You Choose</title>
+<style>
+:root{color-scheme:dark;--ink:#eef2ec;--muted:#b8c9d0;--gold:#eac78e;--bg:#091322;--stroke:rgba(238,242,236,.21);--focus:#f1ce83}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.65;overflow-x:hidden}
+button,a{font:inherit}a{color:var(--gold)}button{cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:5px}
+.skip{position:absolute;left:-9999px;top:10px;z-index:20}.skip:focus{left:12px;background:#fff;color:#000;padding:10px}
+.topbar{position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px max(20px,calc((100vw - 1080px)/2));background:#08111b;border-bottom:1px solid var(--stroke);font:600 11px/1.4 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.topbar a{text-decoration:none}.topbar span{color:var(--muted)}.hero{position:relative;isolation:isolate;min-height:88svh;display:grid;place-items:center;padding:90px 20px 80px;text-align:center;overflow:hidden;background:radial-gradient(ellipse at 50% 67%,#284459 0%,#112638 38%,#091322 78%)}
+.hero:before{content:"";position:absolute;inset:-20%;z-index:-1;background:repeating-conic-gradient(from 15deg at 50% 55%,transparent 0deg 19deg,rgba(224,195,133,.048) 20deg 20.3deg);animation:turn 100s linear infinite}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(transparent 72%,#091322)}
+.eyebrow{font:700 11px/1.4 system-ui,sans-serif;letter-spacing:.27em;text-transform:uppercase;color:var(--gold)}
+h1,h2,p{margin-top:0}h1{font-size:clamp(3.5rem,12vw,8.8rem);line-height:.92;letter-spacing:-.065em;font-weight:400;margin:18px 0 28px}h1 em{display:block;font-weight:400;color:var(--gold)}.lede{font-size:clamp(1.07rem,2.5vw,1.4rem);max-width:580px;margin:0 auto 30px;color:#d8e1e1}.cta,.secondary,.choice{border:1px solid #c3a576;background:var(--gold);color:#121e2b;border-radius:3px;min-height:48px;padding:12px 24px;font:700 12px/1.4 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:10px}
+.secondary{background:transparent;color:var(--gold);border-color:var(--stroke)}.cta:hover,.choice:hover{filter:brightness(1.12)}
+.watch{position:relative;width:min(48vw,280px);aspect-ratio:1;margin:0 auto 35px;border-radius:50%;border:12px double #a88858;background:radial-gradient(circle at 40% 30%,#345069,#091423 66%);box-shadow:0 0 0 9px #243345,0 0 0 11px #a18a60,0 20px 90px #0009,inset 0 0 55px #000}
+.watch:before,.watch:after{content:"";position:absolute;left:49%;top:50%;transform-origin:50% 0;background:var(--gold);border-radius:3px}.watch:before{width:4px;height:36%;transform:rotate(145deg)}.watch:after{width:3px;height:28%;transform:rotate(-50deg)}.watch b{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:13px;height:13px;border:3px solid #f9e5bc;background:#142638;border-radius:50%;z-index:2}.watch i{position:absolute;inset:13%;border:1px dotted #a88b5d;border-radius:50%}
+.watch-label{position:absolute;inset:0;display:grid;place-items:start center;padding-top:17%;font:700 9px system-ui,sans-serif;letter-spacing:.2em;color:#e7cc95}
+main{position:relative}.chapter{max-width:960px;margin:auto;padding:100px 20px 125px;min-height:82svh}.chapter+.chapter{border-top:1px solid var(--stroke)}.chapter h2{font-size:clamp(2.5rem,7vw,5.6rem);font-weight:400;line-height:1.02;letter-spacing:-.045em;max-width:800px;margin:14px 0 35px}.chapter p{font-size:clamp(1.13rem,2.6vw,1.45rem);max-width:660px;color:#e1e7e4}.chapter .small{font:500 12px/1.6 system-ui,sans-serif;color:var(--muted)}.dialogue{margin:34px 0;padding:26px 22px;border-left:3px solid var(--gold);background:#ffffff08;max-width:700px}.dialogue p{font-style:italic;margin:0}.dialogue cite{display:block;margin-top:13px;font:700 11px system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);font-style:normal}
+.art{position:relative;width:100%;height:clamp(220px,48vw,420px);border:1px solid var(--stroke);overflow:hidden;margin:30px 0 40px;background:radial-gradient(ellipse at 50% 80%,#d2a36542,transparent 42%),linear-gradient(#172d40,#0c1827)}
+.art.city:before{content:"";position:absolute;bottom:0;left:0;width:100%;height:80%;background:repeating-linear-gradient(90deg,transparent 0 7%,#06111d 7% 11%,transparent 11% 17%);clip-path:polygon(0 65%,8% 65%,8% 46%,18% 46%,18% 61%,28% 61%,28% 27%,38% 27%,38% 58%,50% 58%,50% 37%,64% 37%,64% 62%,74% 62%,74% 20%,84% 20%,84% 51%,92% 51%,92% 66%,100% 66%,100% 100%,0 100%)}
+.art.city:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 18px,#f2c98b44 18px 20px,transparent 20px 47px);mask-image:linear-gradient(transparent 48%,#000 90%);opacity:.4}
+.art.mirror{background:radial-gradient(circle at 50% 48%,#b6b4a548,transparent 36%),linear-gradient(120deg,#101d2c,#314659 52%,#0b1a2a)}.figure{position:absolute;bottom:0;width:100px;height:57%;background:#0a1420;clip-path:polygon(43% 0,60% 0,70% 17%,72% 39%,100% 100%,0 100%,26% 39%,28% 17%);filter:drop-shadow(0 0 14px #dba96766)}.figure.left{left:23%}.figure.right{right:23%;transform:scaleX(-1);opacity:.64}.figure:after{content:"";position:absolute;width:10px;height:60%;left:47%;bottom:0;background:#9e3942;transform:rotate(9deg)}.line{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:30px 0}
+.choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:30px 0 16px}.choice{height:100%;min-height:105px;text-align:left;align-items:flex-start;flex-direction:column;text-transform:none;font:400 20px/1.3 Georgia,serif;letter-spacing:0;padding:18px;background:#13283a;color:#f0e8d8;border-color:#77909b}.choice small{font:700 10px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--gold)}.choice[aria-pressed=true]{border:2px solid var(--gold);background:#314457}.response{border:1px solid var(--gold);padding:24px;margin:24px 0;background:#e6bd7720}.response[hidden],.reveal[hidden]{display:none}.response p{margin:0}.reveal{margin:45px auto;max-width:770px;padding:40px 24px;text-align:center;border:1px solid #bca275;background:radial-gradient(circle at top,#b58a4a25,#0e2032)}.reveal h2{margin:15px auto;font-size:clamp(2.7rem,9vw,6rem);text-align:center}.reveal p{margin:0 auto 23px}.mechanism{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;max-width:610px;margin:25px auto}.mechanism span{border:1px solid #b49b70;padding:10px 3px;font:700 10px system-ui,sans-serif;letter-spacing:.08em;color:#edd4a5}
+.ending{background:radial-gradient(ellipse at 50% 0%,#304957,#0a1522 75%);max-width:none;padding:110px max(20px,calc((100vw - 960px)/2));text-align:center}.ending h2,.ending p{margin-left:auto;margin-right:auto}.credits{font:500 12px/1.8 system-ui,sans-serif;color:var(--muted);text-align:center;padding:28px 16px 55px}.credits a{margin:0 8px}
+@keyframes turn{to{transform:rotate(360deg)}}@media(max-width:600px){.topbar{padding:14px 16px;letter-spacing:.06em}.hero{min-height:85svh;padding:64px 18px}.watch{width:190px}.chapter{padding:75px 20px 92px;min-height:auto}.choice-grid{grid-template-columns:1fr}.choice{min-height:76px}.mechanism{grid-template-columns:repeat(2,1fr)}.art{margin:24px 0 28px}.dialogue{padding:20px 18px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero:before{animation:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#story">Skip to story</a>
+<header class="topbar"><a href="./index.html">← MANIFESTO · The Missing Minute</a><span>Chapter V / Finale</span></header>
+<section class="hero" aria-labelledby="chapter-title">
+<div>
+<div class="watch" role="img" aria-label="An ancient brass watch waiting at one minute before midnight"><i></i><span class="watch-label">MANIFESTO</span><b></b></div>
+<div class="eyebrow">The final mechanism</div>
+<h1 id="chapter-title">The Hour <em>You Choose.</em></h1>
+<p class="lede">A minute can be saved for you. But it cannot be lived in your place.</p>
+<a class="cta" href="#story">Open the final chapter ↓</a>
+</div>
+</section>
+<main id="story">
+<section class="chapter" id="scene-one">
+<div class="eyebrow">01 / The Fourth Gear</div>
+<h2>The man who knew every answer.</h2>
+<div class="art mirror" role="img" aria-label="Two silhouettes in navy coats face one another across the shining chamber of a clock"><div class="figure left"></div><div class="figure right"></div></div>
+<p>The other Dhanu stood beneath the vault of Vesper with a clockwork gear pressed to his palm. Behind him, a thousand little clocks remained stopped at 11:59.</p>
+<p>He had Dhanu's eyes. The same red sash. Even the small scar on the brass compass looked familiar.</p>
+<div class="dialogue"><p>“I knew you would reach the last room. I made sure you would.”</p><cite>The other Dhanu</cite></div>
+<p>“You sent the letter,” Dhanu said.</p><p>“I wrote it. But I couldn't send it from the life I was living.”</p>
+<p>The other Dhanu explained: one year ahead, he had spent so long preparing for the perfect next step that every next step had become impossible. He could list a hundred futures. He had stopped stepping into any of them.</p>
+<p>So he made a bargain with Vesper: reserve a single minute at the edge of a birthday. Put the younger Dhanu through the city. Show him what the clocks could not.</p>
+<div class="dialogue"><p>“I thought I was giving you time. Really, I was trying to borrow your courage.”</p><cite>The other Dhanu</cite></div>
+<p>Nix shook rain from his copper-ringed wings. “An impressively complicated way to admit you were scared.”</p>
+</section>
+<section class="chapter" id="scene-two">
+<div class="eyebrow">02 / An Unsent Future</div>
+<h2>No one gets to live the day twice.</h2>
+<div class="art city" role="img" aria-label="A fictional clockwork city with a night skyline and tiny gold-lit windows"></div>
+<p>The other Dhanu held out the last gear, then withdrew it.</p>
+<div class="dialogue"><p>“If I give you CHOOSE, this whole version of me might disappear. I don't know who I become after that.”</p><cite>The other Dhanu</cite></div>
+<p>“Neither do I,” said Dhanu. “That's the point.”</p>
+<p>At his wrist, Manifesto carried three answers he'd earned. <strong>BEGIN</strong> from the Sea of Almosts. <strong>RETURN</strong> from the Bellkeeper who tried a different way. <strong>WITNESS</strong> from a city where records could be true without telling the whole truth.</p>
+<p>The fourth was not a trophy. It was permission to make an imperfect decision and own it.</p>
+<p>From somewhere deep in the mechanism, Siri's voice flickered through the old recording: “Whatever you're chasing, you don't have to solve your whole life tonight.”</p>
+<p>A second crackle: Sanjay, over that battered radio from the ship. “And don't forget to come back and tell us the story.”</p>
+<p>Dhanu smiled. The people waiting for him were not footnotes in someone else's grand plan. They were part of his life, here, now.</p>
+</section>
+<section class="chapter" id="scene-three">
+<div class="eyebrow">03 / Your move</div>
+<h2>What does Dhanu say?</h2>
+<p>For the first time, the other Dhanu didn't have a prepared answer. He waited. Choose how Dhanu meets this uncertain future. Each path leads onward; there is no wrong answer.</p>
+<div class="choice-grid" role="group" aria-label="Choose Dhanu's reply">
+<button class="choice" type="button" data-choice="kind" aria-pressed="false"><small>Compassion</small>“You don't have to vanish to let me grow.”</button>
+<button class="choice" type="button" data-choice="brave" aria-pressed="false"><small>Courage</small>“Give me the gear. I'll make my own mistakes.”</button>
+<button class="choice" type="button" data-choice="open" aria-pressed="false"><small>Wonder</small>“Come on. There must be another way.”</button>
+</div>
+<div class="response" id="response" role="status" aria-live="polite" hidden><p id="response-text"></p></div>
+<button id="continue" class="cta" type="button" disabled>Continue the story →</button>
+<p class="small">Your choice stays in this browser only. The ending belongs to Dhanu either way.</p>
+</section>
+<section class="chapter" id="scene-four" tabindex="-1">
+<div class="eyebrow">04 / Twelve</div>
+<h2>The minute that was promised.</h2>
+<p>Dhanu extended his hand. Not for a fight. Not to seize the gear. Simply an open hand.</p>
+<p>For a moment the other Dhanu looked like a boy standing at the start of a road. Then he laughed, quietly, and set the final gear into that hand.</p>
+<div class="dialogue"><p>“I kept trying to make sure you never regretted anything.”</p><cite>The other Dhanu</cite></div>
+<div class="dialogue"><p>“That isn't the same as living.”</p><cite>Dhanu</cite></div>
+<p>The four mechanisms fitted together with a sound no louder than a heartbeat. Across Vesper, the clocks began to move. No city crumbled. No villain vanished in a flash. The other Dhanu looked up at the moving hands, and for the first time, he did not try to stop them.</p>
+<p>The letter in Dhanu's coat unfolded one final time. Beneath its old message, a new line appeared in his own handwriting:</p>
+<div class="dialogue"><p>“I cannot tell you what happens next. I can only promise you the chance to find out.”</p><cite>The letter from tomorrow</cite></div>
+<p>In the world beyond Vesper, 11:59 became 12:00. One minute returned to its rightful owner: not a future self, not a city of ledgers, but the person standing inside it.</p>
+<div class="reveal" id="final-reveal" hidden>
+<div class="eyebrow">The watch is whole</div>
+<div class="mechanism" aria-label="The four mechanisms of Manifesto"><span>BEGIN</span><span>RETURN</span><span>WITNESS</span><span>CHOOSE</span></div>
+<h2>Happy Birthday, Dhanu.</h2>
+<p>Here's to the roads you haven't taken yet. To all the things you will learn, the people who will laugh beside you, and the person you are becoming along the way.</p>
+<p>There may be a doctorate at the end of one road. There will be a hundred other beginnings, too. You don't need a map for every single one.</p>
+<p>Just keep your time. Make it yours.</p>
+</div>
+<button class="cta" id="reveal-btn" type="button">Turn the last gear ✦</button>
+</section>
+<section class="chapter ending" id="epilogue">
+<div class="eyebrow">Post-credits / Somewhere in the morning</div>
+<h2>One more minute?</h2>
+<p>On an ordinary windowsill, a little storm petrel pecked at a watch that now worked perfectly.</p>
+<div class="dialogue"><p>“So,” Nix said, “can we finally have breakfast? I've been dramatic on an empty stomach for five chapters.”</p></div>
+<p>Dhanu laughed. Outside, the city had started moving again. This time, he went with it.</p>
+<a class="secondary" href="./index.html">↶ Return to the graphic novel</a>
+</section>
+</main>
+<footer class="credits">MANIFESTO — The Missing Minute · An original story for Dhanu <a href="#chapter-title">Back to top</a></footer>
+<script>
+(function(){
+'use strict';
+var buttons=Array.from(document.querySelectorAll('[data-choice]'));
+var response=document.getElementById('response');
+var responseText=document.getElementById('response-text');
+var next=document.getElementById('continue');
+var reveal=document.getElementById('final-reveal');
+var revealBtn=document.getElementById('reveal-btn');
+var replies={
+kind:'The other Dhanu lowered his eyes. “Then maybe I can learn from you, too.” The gear grew warm in his hand.',
+brave:'“You will,” the other Dhanu said, almost smiling. “And you will survive them.” He loosened his grip on the gear.',
+open:'Nix gave a scandalised squawk. “A fourth option? In this economy?” Even the other Dhanu laughed. His fist opened.'
+};
+function store(key,val){try{localStorage.setItem(key,val)}catch(e){}}
+function load(key){try{return localStorage.getItem(key)}catch(e){return null}}
+function choose(val){buttons.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.choice===val))});responseText.textContent=replies[val];response.hidden=false;next.disabled=false;store('manifesto.chapter5.choice',val)}
+buttons.forEach(function(b){b.addEventListener('click',function(){choose(b.dataset.choice)})});
+var old=load('manifesto.chapter5.choice');if(old&&replies[old])choose(old);
+next.addEventListener('click',function(){store('manifesto.chapter5.reachedEnding','yes');document.getElementById('scene-four').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});
+function showEnding(){reveal.hidden=false;revealBtn.hidden=true;store('manifesto.chapter5.completed','yes');reveal.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'})}
+revealBtn.addEventListener('click',showEnding);
+if(load('manifesto.chapter5.completed')==='yes'){reveal.hidden=false;revealBtn.textContent='The final gear has turned';revealBtn.disabled=true}
+})();
+</script>
+</body></html>
