@@ -4,7 +4,7 @@
 
 ### Read it
 
-The original four-chapter graphic novel is in **[index.html](index.html)**, with the finale in **[chapter-five.html](chapter-five.html)**. On the public GitHub Pages website, open:
+The main illustrated graphic novel is in **[index.html](index.html)**, with the finale in **[chapter-five.html](chapter-five.html)**. On the public GitHub Pages website, open:
 
 **https://onetripteam-com.github.io/Dhanu/**
 
@@ -12,7 +12,7 @@ The original four-chapter graphic novel is in **[index.html](index.html)**, with
 
 Both HTML pages are self-contained: illustrations, styles, scripts and challenges are embedded. No login, tracking, external fonts or internet requests are needed to read a downloaded copy.
 
-### Current story chapters
+### Story chapters / new standalone finale
 
 - Chapter I — Eleven Fifty-Nine
 - Chapter II — The Ship of Forgotten Tomorrows
@@ -20,7 +20,7 @@ Both HTML pages are self-contained: illustrations, styles, scripts and challenge
 - Chapter IV — The City Behind the Wall
 - Chapter V — The Hour You Choose ([read the new finale](chapter-five.html))
 
-Chapters I–IV remain in the original self-contained graphic novel. Chapter V has been published as a separate self-contained page, with an optional interactive decision and birthday reveal. This avoids rewriting the original 3.3 MB page during the finale release. **The original in-page chapter menu has not yet been integrated with Chapter V**; use the direct Chapter V link above. Progress is stored locally in the reader's browser.
+The existing illustrated graphic novel remains unchanged in `index.html`. A new standalone Chapter V interpretation has been added with an optional interactive decision and birthday reveal. Because the original HTML is about 3.3 MB and could not be fully retrieved through the connector, **this release has not been integrated or continuity-checked against every scene in `index.html`**. Use the direct Chapter V link above. Progress for this page is stored locally in the reader's browser.
 
 ### Edit and publish
 
