@@ -24,8 +24,8 @@ main{position:relative}.chapter{max-width:960px;margin:auto;padding:100px 20px 1
 .art.city:before{content:"";position:absolute;bottom:0;left:0;width:100%;height:80%;background:repeating-linear-gradient(90deg,transparent 0 7%,#06111d 7% 11%,transparent 11% 17%);clip-path:polygon(0 65%,8% 65%,8% 46%,18% 46%,18% 61%,28% 61%,28% 27%,38% 27%,38% 58%,50% 58%,50% 37%,64% 37%,64% 62%,74% 62%,74% 20%,84% 20%,84% 51%,92% 51%,92% 66%,100% 66%,100% 100%,0 100%)}
 .art.city:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 18px,#f2c98b44 18px 20px,transparent 20px 47px);mask-image:linear-gradient(transparent 48%,#000 90%);opacity:.4}
 .art.mirror{background:radial-gradient(circle at 50% 48%,#b6b4a548,transparent 36%),linear-gradient(120deg,#101d2c,#314659 52%,#0b1a2a)}.figure{position:absolute;bottom:0;width:100px;height:57%;background:#0a1420;clip-path:polygon(43% 0,60% 0,70% 17%,72% 39%,100% 100%,0 100%,26% 39%,28% 17%);filter:drop-shadow(0 0 14px #dba96766)}.figure.left{left:23%}.figure.right{right:23%;transform:scaleX(-1);opacity:.64}.figure:after{content:"";position:absolute;width:10px;height:60%;left:47%;bottom:0;background:#9e3942;transform:rotate(9deg)}.line{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:30px 0}
-.choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:30px 0 16px}.choice{height:100%;min-height:105px;text-align:left;align-items:flex-start;flex-direction:column;text-transform:none;font:400 20px/1.3 Georgia,serif;letter-spacing:0;padding:18px;background:#13283a;color:#f0e8d8;border-color:#77909b}.choice small{font:700 10px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--gold)}.choice[aria-pressed=true]{border:2px solid var(--gold);background:#314457}.response{border:1px solid var(--gold);padding:24px;margin:24px 0;background:#e6bd7720}.response[hidden],.reveal[hidden]{display:none}.response p{margin:0}.reveal{margin:45px auto;max-width:770px;padding:40px 24px;text-align:center;border:1px solid #bca275;background:radial-gradient(circle at top,#b58a4a25,#0e2032)}.reveal h2{margin:15px auto;font-size:clamp(2.7rem,9vw,6rem);text-align:center}.reveal p{margin:0 auto 23px}.mechanism{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;max-width:610px;margin:25px auto}.mechanism span{border:1px solid #b49b70;padding:10px 3px;font:700 10px system-ui,sans-serif;letter-spacing:.08em;color:#edd4a5}
-.ending{background:radial-gradient(ellipse at 50% 0%,#304957,#0a1522 75%);max-width:none;padding:110px max(20px,calc((100vw - 960px)/2));text-align:center}.ending h2,.ending p{margin-left:auto;margin-right:auto}.credits{font:500 12px/1.8 system-ui,sans-serif;color:var(--muted);text-align:center;padding:28px 16px 55px}.credits a{margin:0 8px}
+.choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:30px 0 16px}.choice{height:100%;min-height:105px;text-align:left;align-items:flex-start;flex-direction:column;text-transform:none;font:400 20px/1.3 Georgia,serif;letter-spacing:0;padding:18px;background:#13283a;color:#f0e8d8;border-color:#77909b}.choice small{font:700 10px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--gold)}.choice[aria-pressed=true]{border:2px solid var(--gold);background:#314457}.response{border:1px solid var(--gold);padding:24px;margin:24px 0;background:#e6bd7720}.response[hidden],.reveal[hidden],.chapter[hidden]{display:none}.response p{margin:0}.reveal{margin:45px auto;max-width:770px;padding:40px 24px;text-align:center;border:1px solid #bca275;background:radial-gradient(circle at top,#b58a4a25,#0e2032)}.reveal h2{margin:15px auto;font-size:clamp(2.7rem,9vw,6rem);text-align:center}.reveal p{margin:0 auto 23px}.mechanism{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;max-width:610px;margin:25px auto}.mechanism span{border:1px solid #b49b70;padding:10px 3px;font:700 10px system-ui,sans-serif;letter-spacing:.08em;color:#edd4a5}
+.chapter-nav{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:24px 0 32px;font:600 11px/1.6 system-ui,sans-serif;letter-spacing:.05em;color:var(--muted)}.chapter-nav a{padding:8px 11px;border:1px solid var(--stroke);border-radius:2px;text-decoration:none;color:var(--ink)}.chapter-nav a:focus-visible,.chapter-nav a:hover{border-color:var(--gold)}.chapter-nav a[hidden]{display:none}.recap{max-width:720px;margin:26px 0 44px;padding:22px;border:1px solid var(--stroke);background:#17283a}.recap summary{cursor:pointer;color:var(--gold);font:700 12px/1.5 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase}.recap p{font-size:1.08rem;margin:16px 0 0}.locked-note{max-width:660px;color:var(--muted);font:500 12px/1.7 system-ui,sans-serif}.ending{background:radial-gradient(ellipse at 50% 0%,#304957,#0a1522 75%);max-width:none;padding:110px max(20px,calc((100vw - 960px)/2));text-align:center}.ending h2,.ending p{margin-left:auto;margin-right:auto}.credits{font:500 12px/1.8 system-ui,sans-serif;color:var(--muted);text-align:center;padding:28px 16px 55px}.credits a{margin:0 8px}
 @keyframes turn{to{transform:rotate(360deg)}}@media(max-width:600px){.topbar{padding:14px 16px;letter-spacing:.06em}.hero{min-height:85svh;padding:64px 18px}.watch{width:190px}.chapter{padding:75px 20px 92px;min-height:auto}.choice-grid{grid-template-columns:1fr}.choice{min-height:76px}.mechanism{grid-template-columns:repeat(2,1fr)}.art{margin:24px 0 28px}.dialogue{padding:20px 18px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero:before{animation:none}}
 </style>
 </head>
@@ -43,6 +43,8 @@ main{position:relative}.chapter{max-width:960px;margin:auto;padding:100px 20px 1
 </section>
 <main id="story">
 <section class="chapter" id="scene-one">
+<nav class="chapter-nav" aria-label="Final chapter scenes"><a href="#scene-one">The fourth gear</a><a href="#scene-two">An unsent future</a><a href="#scene-three">Your move</a><a href="#scene-four" id="ending-link" hidden>The promised minute</a></nav>
+<details class="recap"><summary>Previously in MANIFESTO · Chapters I–IV</summary><p>At 11:59, Dhanu followed a letter in his own handwriting into the Sea of Almosts, returned the Bellkeeper’s broken morning, and uncovered Vesper’s secret: a future version of himself had reserved his missing minute. Manifesto now holds three mechanisms—BEGIN, RETURN and WITNESS. The fourth can only be given freely.</p></details>
 <div class="eyebrow">01 / The Fourth Gear</div>
 <h2>The man who knew every answer.</h2>
 <div class="art mirror" role="img" aria-label="Two silhouettes in navy coats face one another across the shining chamber of a clock"><div class="figure left"></div><div class="figure right"></div></div>
@@ -79,9 +81,9 @@ main{position:relative}.chapter{max-width:960px;margin:auto;padding:100px 20px 1
 </div>
 <div class="response" id="response" role="status" aria-live="polite" hidden><p id="response-text"></p></div>
 <button id="continue" class="cta" type="button" disabled>Continue the story →</button>
-<p class="small">Your choice stays in this browser only. The ending belongs to Dhanu either way.</p>
+<p class="small">Your choice stays in this browser only. The ending belongs to Dhanu either way. The last scene unlocks after you continue.</p>
 </section>
-<section class="chapter" id="scene-four" tabindex="-1">
+<section class="chapter" id="scene-four" tabindex="-1" hidden>
 <div class="eyebrow">04 / Twelve</div>
 <h2>The minute that was promised.</h2>
 <p>Dhanu extended his hand. Not for a fight. Not to seize the gear. Simply an open hand.</p>
@@ -102,7 +104,7 @@ main{position:relative}.chapter{max-width:960px;margin:auto;padding:100px 20px 1
 </div>
 <button class="cta" id="reveal-btn" type="button">Turn the last gear ✦</button>
 </section>
-<section class="chapter ending" id="epilogue">
+<section class="chapter ending" id="epilogue" hidden>
 <div class="eyebrow">Post-credits / Somewhere in the morning</div>
 <h2>One more minute?</h2>
 <p>On an ordinary windowsill, a little storm petrel pecked at a watch that now worked perfectly.</p>
@@ -121,6 +123,12 @@ var responseText=document.getElementById('response-text');
 var next=document.getElementById('continue');
 var reveal=document.getElementById('final-reveal');
 var revealBtn=document.getElementById('reveal-btn');
+var lastScene=document.getElementById('scene-four');
+var epilogue=document.getElementById('epilogue');
+var endingLink=document.getElementById('ending-link');
+var reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+function motion(){return reducedMotion.matches?'auto':'smooth'}
+function unlock(){lastScene.hidden=false;endingLink.hidden=false;store('manifesto.chapter5.reachedEnding','yes')}
 var replies={
 kind:'The other Dhanu lowered his eyes. “Then maybe I can learn from you, too.” The gear grew warm in his hand.',
 brave:'“You will,” the other Dhanu said, almost smiling. “And you will survive them.” He loosened his grip on the gear.',
@@ -131,10 +139,11 @@ function load(key){try{return localStorage.getItem(key)}catch(e){return null}}
 function choose(val){buttons.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.choice===val))});responseText.textContent=replies[val];response.hidden=false;next.disabled=false;store('manifesto.chapter5.choice',val)}
 buttons.forEach(function(b){b.addEventListener('click',function(){choose(b.dataset.choice)})});
 var old=load('manifesto.chapter5.choice');if(old&&replies[old])choose(old);
-next.addEventListener('click',function(){store('manifesto.chapter5.reachedEnding','yes');document.getElementById('scene-four').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});
-function showEnding(){reveal.hidden=false;revealBtn.hidden=true;store('manifesto.chapter5.completed','yes');reveal.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'})}
+next.addEventListener('click',function(){unlock();lastScene.scrollIntoView({behavior:motion()});lastScene.focus({preventScroll:true})});
+if(load('manifesto.chapter5.reachedEnding')==='yes'||load('manifesto.chapter5.completed')==='yes'){unlock()}
+function showEnding(){unlock();reveal.hidden=false;revealBtn.hidden=true;epilogue.hidden=false;store('manifesto.chapter5.completed','yes');reveal.scrollIntoView({behavior:motion(),block:'center'})}
 revealBtn.addEventListener('click',showEnding);
-if(load('manifesto.chapter5.completed')==='yes'){reveal.hidden=false;revealBtn.textContent='The final gear has turned';revealBtn.disabled=true}
+if(load('manifesto.chapter5.completed')==='yes'){reveal.hidden=false;epilogue.hidden=false;revealBtn.hidden=true}
 })();
 </script>
 </body></html>
