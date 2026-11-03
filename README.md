@@ -4,15 +4,15 @@
 
 ### Read it
 
-The main illustrated graphic novel is in **[index.html](index.html)**, with the finale in **[chapter-five.html](chapter-five.html)**. On the public GitHub Pages website, open:
+**All five chapters are now readable inside [index.html](index.html)**. The finale is embedded directly in that one HTML file, without a separate network request. On the public GitHub Pages website, open:
 
 **https://onetripteam-com.github.io/Dhanu/**
 
-**New Chapter V finale (standalone): https://onetripteam-com.github.io/Dhanu/chapter-five.html**
+Chapter V is available via the **Chapter V · The Finale** control on the main page. The original [standalone Chapter V URL](chapter-five.html) remains available for compatibility.
 
-Both HTML pages are self-contained: illustrations, styles, scripts and challenges are embedded. No login, tracking, external fonts or internet requests are needed to read a downloaded copy.
+The unified main HTML is self-contained: the original illustrations, styles, scripts and challenges are preserved, and Chapter V is embedded as an isolated inline reader. No login, tracking, external fonts, or internet requests are needed to read a downloaded copy.
 
-### Story chapters / new standalone finale
+### Story chapters — one HTML
 
 - Chapter I — Eleven Fifty-Nine
 - Chapter II — The Ship of Forgotten Tomorrows
@@ -24,13 +24,13 @@ The existing illustrated graphic novel remains unchanged in `index.html`. A stan
 
 ### Edit and publish
 
-Update `index.html` and/or `chapter-five.html` on the `main` branch to publish the next version. GitHub Pages should be set to **Deploy from branch → main → / (root)**. Deployment status is visible under **Actions** and **Settings → Pages**.
+Update the original Chapters I–IV in `index.html` and Chapter V in `chapter-five.html`. The GitHub Actions workflow `.github/workflows/merge-chapters.yml` reruns `scripts/merge_chapters.py` after updates to Chapter V or the merge tool, and publishes the combined `index.html`. If editing the main story, retain the marked inline Chapter V section. GitHub Pages should be set to **Deploy from branch → main → / (root)**. Deployment status is visible under **Actions** and **Settings → Pages**.
 
 The artwork includes original anime-inspired character studies. Dhanu's name is fixed in the story—there is no personalization field. The supporting characters are fictional illustrations rather than photographs.
 
 ### Implementation notes
 
-- Two self-contained static HTML pages; no build commands
+- One unified self-contained HTML reader on the home URL, plus a compatibility Chapter V source file
 - Accessible button controls, a Chapter V recap, and a choice-gated finale
 - Mobile reading layout and responsive desktop view
 - Reduced-motion-aware animations
