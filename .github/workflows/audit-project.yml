@@ -25,7 +25,7 @@ jobs:
       - name: Keep contact sheets and inventory only
         run: |
           rm -f audit/image-*.jpg audit/image-*.png audit/image-*.webp audit/image-*.svg
-          git add audit/inventory.md audit/report.json
+          git add audit/inventory.md audit/report.json audit/panels.md audit/visible-text.txt
           git add -A audit/contact-sheet-*.jpg 2>/dev/null || true
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
