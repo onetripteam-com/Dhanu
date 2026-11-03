@@ -1,30 +1,38 @@
 # MANIFESTO — The Missing Minute
 
-An original, chapter-based illustrated birthday adventure starring **Dhanu**.
+**An original birthday graphic novel for Dhanu.** A cinematic, mobile-first story about a lost minute, an impossible voyage, and the legendary timepiece called Manifesto.
 
-## Read the story
-Open `index.html` in a browser. It is a self-contained HTML file with the illustrations embedded, so it works offline.
+### Read it
 
-## Chapters included
-1. **Eleven Fifty-Nine** — Time freezes before Dhanu's birthday. A storm petrel called Nix arrives with a letter from the future.
-2. **The Ship of Forgotten Tomorrows** — The Sea of Almosts, a possible future Dhanu, an impossible call from Sanjay, and the first Manifesto gear.
-3. **The Thousandth Morning** — A bell-tower trial about disciplined learning rather than blindly repeating mistakes.
+The full website is in **[index.html](index.html)**. On the public GitHub Pages website, open:
 
-Chapters 4 and 5 are **not yet implemented**.
+**https://onetripteam-com.github.io/Dhanu/**
 
-## Design and privacy
-- Dhanu's name is fixed. There is no public personalization UI.
-- Original anime-inspired fictional character artwork; not a photographic likeness.
-- No external network requests, trackers, accounts, or external fonts.
-- The optional story challenges do not block reading.
-- Reading/puzzle progress is stored locally on the reader's device.
-- Layout supports phone and desktop; test on real devices before birthday sharing.
+The HTML is self-contained: illustrations, styles, scripts and challenges are embedded. No login, tracking, external fonts or internet requests are needed to read a downloaded copy.
 
-## GitHub Pages
-The repository is **private**. Pushing HTML does not automatically publish a website.
-If you enable GitHub Pages in repository Settings → Pages, select **Deploy from a branch → main → /(root)**. Check your GitHub plan's Pages eligibility and visibility: a Pages site may be publicly accessible even when its source repository is private. Don't publish sensitive details in a birthday gift.
+### Included in Edition 04
 
-## Next creative pass
-Maintain Dhanu as the hero, build consistent character art with **different expressions and action poses** (not repeated standing portraits), retain Sanjay as a supporting character, write Chapter 4 with a plot-relevant role for Siri, and add only story-serving puzzles.
+- Chapter I — Eleven Fifty-Nine
+- Chapter II — The Ship of Forgotten Tomorrows
+- Chapter III — The Thousandth Morning
+- Chapter IV — The City Behind the Wall
 
-The original franchise characters and artwork are not used; the story takes thematic inspiration from adventure, courage, loyalty, and discipline.
+Each chapter reads as a graphic novel. Four optional story challenges offer a little agency without forcing readers to play. Progress is saved locally in the browser; no information is uploaded.
+
+**Chapter V — The Hour You Choose is planned, not published yet.** This is a four-chapter edition, not the final birthday reveal.
+
+### Edit and publish
+
+Update `index.html` on the `main` branch to publish the next version. GitHub Pages should be set to **Deploy from branch → main → / (root)**. Deployment status is visible under **Actions** and **Settings → Pages**.
+
+The artwork includes original anime-inspired character studies. Dhanu's name is fixed in the story—there is no personalization field. The supporting characters are fictional illustrations rather than photographs.
+
+### Implementation notes
+
+- One static HTML file; no build commands
+- Accessible button controls and optional skip paths
+- Mobile reading layout and responsive desktop view
+- Reduced-motion-aware animations
+- Existing Chapter I–III progress keys preserved across updates
+
+See `STORY_BIBLE.md` for editorial continuity and future-chapter notes (contains spoilers).
