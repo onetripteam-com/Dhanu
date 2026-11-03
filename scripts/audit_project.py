@@ -42,7 +42,7 @@ for typ,pat in patterns:
     bs=base64.b64decode(payload,validate=True)
     item['bytes']=len(bs)
     item['signature']=bs[:12].hex()
-    (out/f'image-{len(images)+1:03d}.'+('jpg' if mime=='image/jpeg' else 'png' if mime=='image/png' else 'webp' if mime=='image/webp' else 'svg')).write_bytes(bs)
+    (out / ('image-%03d.%s' % (len(images)+1, 'jpg' if mime=='image/jpeg' else 'png' if mime=='image/png' else 'webp' if mime=='image/webp' else 'svg'))).write_bytes(bs)
    except Exception as ex:item['decode_error']=str(ex)
   images.append(item)
 # A second pass finds arbitrary JS or HTML embedded image sources that weren't captured above
