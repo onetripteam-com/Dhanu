@@ -1,0 +1,49 @@
+name: Merge MANIFESTO chapters into one HTML
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/merge_chapters.py'
+      - 'chapter-five.html'
+      - '.github/workflows/merge-chapters.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Merge original illustrated story and Chapter V
+        run: python scripts/merge_chapters.py
+      - name: Validate one-file chapter reader
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          html=Path("index.html").read_text(encoding="utf-8")
+          assert html.count("MANIFESTO-CHAPTER-FIVE-INLINE:START")==1
+          assert html.count("MANIFESTO-CHAPTER-FIVE-INLINE:END")==1
+          assert "Happy Birthday, Dhanu." in html
+          assert 'id="manifesto-finale-frame"' in html
+          assert len(html)>3000000
+          print("Validated unified MANIFESTO HTML:",len(html),"characters")
+          PY
+      - name: Publish single-file reader
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "One-file reader is already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Embed Chapter V in main illustrated HTML"
+          git push
