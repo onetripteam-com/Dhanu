@@ -119,7 +119,15 @@ try:
  tiles=[]
  for f in sorted(files):
   try:
-   \n   if f.suffix=='.svg':\n    import cairosvg\n    im=Image.open(io.BytesIO(cairosvg.svg2png(url=str(f),output_width=480))).convert('RGBA')\n    backdrop=Image.new('RGBA',im.size,(235,227,206,255));backdrop.alpha_composite(im);im=backdrop.convert('RGB')\n   else: im=Image.open(f).convert('RGB')\n   im.thumbnail((310,190))
+   if f.suffix=='.svg':
+    import cairosvg
+    im=Image.open(io.BytesIO(cairosvg.svg2png(url=str(f),output_width=480))).convert('RGBA')
+    backdrop=Image.new('RGBA',im.size,(235,227,206,255))
+    backdrop.alpha_composite(im)
+    im=backdrop.convert('RGB')
+   else:
+    im=Image.open(f).convert('RGB')
+   im.thumbnail((310,190))
    tiles.append((f,im.copy()))
   except Exception as ex:print('image failed',f,ex)
  for page in range(0,len(tiles),24):
