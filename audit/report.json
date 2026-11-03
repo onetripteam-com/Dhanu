@@ -55,8 +55,7 @@
       "encoded_length": 28500,
       "offset": 51340,
       "bytes": 21374,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 2,
@@ -66,8 +65,7 @@
       "encoded_length": 58372,
       "offset": 79980,
       "bytes": 43778,
-      "signature": "52494646faaa000057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "52494646faaa000057454250"
     },
     {
       "id": 3,
@@ -77,8 +75,7 @@
       "encoded_length": 173112,
       "offset": 139237,
       "bytes": 129834,
-      "signature": "5249464622fb010057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "5249464622fb010057454250"
     },
     {
       "id": 4,
@@ -88,8 +85,7 @@
       "encoded_length": 34456,
       "offset": 313825,
       "bytes": 25841,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 5,
@@ -99,8 +95,7 @@
       "encoded_length": 42004,
       "offset": 407375,
       "bytes": 31502,
-      "signature": "52494646067b000057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "52494646067b000057454250"
     },
     {
       "id": 6,
@@ -110,8 +105,7 @@
       "encoded_length": 16736,
       "offset": 450340,
       "bytes": 12551,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 7,
@@ -121,8 +115,7 @@
       "encoded_length": 20060,
       "offset": 469212,
       "bytes": 15043,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 8,
@@ -132,8 +125,7 @@
       "encoded_length": 16136,
       "offset": 511636,
       "bytes": 12101,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 9,
@@ -143,8 +135,7 @@
       "encoded_length": 154368,
       "offset": 587669,
       "bytes": 115774,
-      "signature": "5249464636c4010057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "5249464636c4010057454250"
     },
     {
       "id": 10,
@@ -154,8 +145,7 @@
       "encoded_length": 186376,
       "offset": 743521,
       "bytes": 139780,
-      "signature": "52494646fc21020057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "52494646fc21020057454250"
     },
     {
       "id": 11,
@@ -165,8 +155,7 @@
       "encoded_length": 147560,
       "offset": 931698,
       "bytes": 110668,
-      "signature": "5249464644b0010057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "5249464644b0010057454250"
     },
     {
       "id": 12,
@@ -176,8 +165,7 @@
       "encoded_length": 140488,
       "offset": 1079945,
       "bytes": 105366,
-      "signature": "524946468e9b010057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "524946468e9b010057454250"
     },
     {
       "id": 13,
@@ -187,8 +175,7 @@
       "encoded_length": 168464,
       "offset": 1221791,
       "bytes": 126346,
-      "signature": "5249464682ed010057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "5249464682ed010057454250"
     },
     {
       "id": 14,
@@ -198,8 +185,7 @@
       "encoded_length": 143168,
       "offset": 1390651,
       "bytes": 107374,
-      "signature": "5249464666a3010057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "5249464666a3010057454250"
     },
     {
       "id": 15,
@@ -209,8 +195,7 @@
       "encoded_length": 23892,
       "offset": 1534596,
       "bytes": 17918,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 16,
@@ -220,8 +205,7 @@
       "encoded_length": 46608,
       "offset": 1559085,
       "bytes": 34956,
-      "signature": "524946468488000057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "524946468488000057454250"
     },
     {
       "id": 17,
@@ -231,8 +215,7 @@
       "encoded_length": 9568,
       "offset": 1606176,
       "bytes": 7174,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 18,
@@ -242,8 +225,7 @@
       "encoded_length": 27212,
       "offset": 1675318,
       "bytes": 20407,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 19,
@@ -253,8 +235,7 @@
       "encoded_length": 14308,
       "offset": 1703628,
       "bytes": 10731,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 20,
@@ -264,8 +245,7 @@
       "encoded_length": 3148,
       "offset": 1718757,
       "bytes": 2359,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 21,
@@ -275,8 +255,7 @@
       "encoded_length": 52828,
       "offset": 1722302,
       "bytes": 39620,
-      "signature": "52494646bc9a000057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "52494646bc9a000057454250"
     },
     {
       "id": 22,
@@ -286,8 +265,7 @@
       "encoded_length": 119952,
       "offset": 1777825,
       "bytes": 89962,
-      "signature": "52494646625f010057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "52494646625f010057454250"
     },
     {
       "id": 23,
@@ -297,8 +275,7 @@
       "encoded_length": 9268,
       "offset": 1900296,
       "bytes": 6950,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 24,
@@ -308,8 +285,7 @@
       "encoded_length": 188128,
       "offset": 1911255,
       "bytes": 141094,
-      "signature": "524946461e27020057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "524946461e27020057454250"
     },
     {
       "id": 25,
@@ -319,8 +295,7 @@
       "encoded_length": 5916,
       "offset": 2100303,
       "bytes": 4435,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 26,
@@ -330,8 +305,7 @@
       "encoded_length": 31360,
       "offset": 2165740,
       "bytes": 23518,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 27,
@@ -341,8 +315,7 @@
       "encoded_length": 4144,
       "offset": 2198235,
       "bytes": 3106,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 28,
@@ -352,8 +325,7 @@
       "encoded_length": 53484,
       "offset": 2203836,
       "bytes": 40112,
-      "signature": "52494646a89c000057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "52494646a89c000057454250"
     },
     {
       "id": 29,
@@ -363,8 +335,7 @@
       "encoded_length": 4744,
       "offset": 2260948,
       "bytes": 3557,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 30,
@@ -374,8 +345,7 @@
       "encoded_length": 9864,
       "offset": 2326322,
       "bytes": 7397,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 31,
@@ -385,8 +355,7 @@
       "encoded_length": 103288,
       "offset": 2338458,
       "bytes": 77466,
-      "signature": "52494646922e010057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "52494646922e010057454250"
     },
     {
       "id": 32,
@@ -396,8 +365,7 @@
       "encoded_length": 2852,
       "offset": 2485956,
       "bytes": 2139,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 33,
@@ -407,8 +375,7 @@
       "encoded_length": 106648,
       "offset": 2489708,
       "bytes": 79986,
-      "signature": "524946466a38010057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "524946466a38010057454250"
     },
     {
       "id": 34,
@@ -418,8 +385,7 @@
       "encoded_length": 29480,
       "offset": 2597606,
       "bytes": 22108,
-      "signature": "524946465456000057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "524946465456000057454250"
     },
     {
       "id": 35,
@@ -429,8 +395,7 @@
       "encoded_length": 157848,
       "offset": 2627990,
       "bytes": 118384,
-      "signature": "5249464668ce010057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "5249464668ce010057454250"
     },
     {
       "id": 36,
@@ -440,8 +405,7 @@
       "encoded_length": 181432,
       "offset": 2786222,
       "bytes": 136074,
-      "signature": "524946468213020057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "524946468213020057454250"
     },
     {
       "id": 37,
@@ -451,8 +415,7 @@
       "encoded_length": 201176,
       "offset": 2970530,
       "bytes": 150882,
-      "signature": "524946465a4d020057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "524946465a4d020057454250"
     },
     {
       "id": 38,
@@ -462,8 +425,7 @@
       "encoded_length": 1892,
       "offset": 3227513,
       "bytes": 1417,
-      "signature": "3c73766720786d6c6e733d22",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "3c73766720786d6c6e733d22"
     },
     {
       "id": 39,
@@ -473,8 +435,7 @@
       "encoded_length": 51608,
       "offset": 3230103,
       "bytes": 38706,
-      "signature": "524946462a97000057454250",
-      "decode_error": "unsupported operand type(s) for +: 'PosixPath' and 'str'"
+      "signature": "524946462a97000057454250"
     }
   ],
   "headings": [
