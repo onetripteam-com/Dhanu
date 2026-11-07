@@ -1,16 +1,14 @@
 {
   "edition": "MANIFESTO Studio Edition II",
-  "testedAt": "2026-11-07T18:04:40.993Z",
+  "testedAt": "2026-11-07T18:07:33.423Z",
   "matrix": [
     {
       "viewport": "phone-360",
-      "loadMs": 689,
+      "loadMs": 744,
       "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
       "documentWidth": 360,
       "viewportWidth": 360,
-      "brokenImages": [
-        ""
-      ],
+      "brokenImages": [],
       "images": 49,
       "artButtons": 18,
       "figures": 12,
@@ -31,13 +29,11 @@
     },
     {
       "viewport": "iphone-393",
-      "loadMs": 667,
+      "loadMs": 577,
       "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
       "documentWidth": 393,
       "viewportWidth": 393,
-      "brokenImages": [
-        ""
-      ],
+      "brokenImages": [],
       "images": 49,
       "artButtons": 18,
       "figures": 12,
@@ -53,20 +49,16 @@
       "dialogExists": true,
       "chapterFiveBodyFont": "Georgia, serif",
       "gridColumns": "minmax(0px, 0.95fr) minmax(0px, 1.05fr)",
-      "errors": [
-        "Cannot access 'pending' before initialization"
-      ],
+      "errors": [],
       "externalRequests": []
     },
     {
       "viewport": "iphone-402",
-      "loadMs": 663,
+      "loadMs": 580,
       "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
       "documentWidth": 402,
       "viewportWidth": 402,
-      "brokenImages": [
-        ""
-      ],
+      "brokenImages": [],
       "images": 49,
       "artButtons": 18,
       "figures": 12,
@@ -87,13 +79,11 @@
     },
     {
       "viewport": "tablet-768",
-      "loadMs": 660,
+      "loadMs": 586,
       "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
       "documentWidth": 768,
       "viewportWidth": 768,
-      "brokenImages": [
-        ""
-      ],
+      "brokenImages": [],
       "images": 49,
       "artButtons": 18,
       "figures": 12,
@@ -114,13 +104,11 @@
     },
     {
       "viewport": "desktop-1440",
-      "loadMs": 665,
+      "loadMs": 606,
       "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
       "documentWidth": 1440,
       "viewportWidth": 1440,
-      "brokenImages": [
-        ""
-      ],
+      "brokenImages": [],
       "images": 49,
       "artButtons": 18,
       "figures": 12,
