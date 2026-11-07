@@ -1,39 +1,38 @@
 # MANIFESTO — The Missing Minute
 
-**An original birthday graphic novel for Dhanu.** A cinematic, mobile-first story about a lost minute, an impossible voyage, and the legendary timepiece called Manifesto.
+An original, illustrated five-chapter birthday adventure for Dhanu. **Director's Cut**: the story is now one continuous HTML page, in the correct chronological order, with no duplicate finale.
 
-### Read it
-
-**All five chapters are now readable inside [index.html](index.html)**. The finale is embedded directly in that one HTML file, without a separate network request. On the public GitHub Pages website, open:
+## Read the story
 
 **https://onetripteam-com.github.io/Dhanu/**
 
-Chapter V is available via the **Chapter V · The Finale** control on the main page. The original [standalone Chapter V URL](chapter-five.html) remains available for compatibility.
+The main `index.html` contains all five chapters, all illustrations, puzzles, styles and scripts. It supports offline reading when downloaded. The experience doesn't require login, external fonts, tracking or cloud infrastructure.
 
-The unified main HTML is self-contained: the original illustrations, styles, scripts and challenges are preserved, and Chapter V is embedded as an isolated inline reader. No login, tracking, external fonts, or internet requests are needed to read a downloaded copy.
+1. Chapter I — Eleven Fifty-Nine
+2. Chapter II — The Ship of Forgotten Tomorrows
+3. Chapter III — The Thousandth Morning
+4. Chapter IV — The City Behind the Wall
+5. Chapter V — The Hour You Choose
 
-### Story chapters — one HTML
+The illustrated Chapter V in the main page is the **definitive ending**. `chapter-five.html` is retained as an archival, alternative standalone interpretation, not linked from the main reading path. Do not republish it over the definitive ending.
 
-- Chapter I — Eleven Fifty-Nine
-- Chapter II — The Ship of Forgotten Tomorrows
-- Chapter III — The Thousandth Morning
-- Chapter IV — The City Behind the Wall
-- Chapter V — The Hour You Choose ([read the new finale](chapter-five.html))
+## What's changed in the Director's Cut
 
-The existing illustrated graphic novel remains unchanged in `index.html`. A standalone Chapter V interpretation has been added with an optional recap, an interactive decision, scene navigation, and a birthday reveal that opens only after the reader continues past the decision. The post-credits scene opens with the reveal. Because the original HTML is about 3.3 MB and could not be fully retrieved through the connector, **this release has not been integrated or continuity-checked against every scene in `index.html`**. Use the direct Chapter V link above. Progress for this page is stored locally in the reader's browser.
+- Restored the I → II → III → IV → V order, including the original misplaced Chapter I closing wrappers
+- Removed the duplicate iframe finale; navigation now reaches the native illustrated Chapter V
+- Introduced Dhanu immediately with face-visible, cinematic existing artwork
+- Fixed Chapter IV's outdated "being written" message and the incorrect three-chapter footer
+- Refined the final gear handover to fulfill Chapter IV's promise: the gear must be **given**
+- Kept original artwork, existing choices, local progress keys and the original single-file offline format
 
-### Edit and publish
+## How to edit
 
-Update the original Chapters I–IV in `index.html` and Chapter V in `chapter-five.html`. The GitHub Actions workflow `.github/workflows/merge-chapters.yml` reruns `scripts/merge_chapters.py` after updates to Chapter V or the merge tool, and publishes the combined `index.html`. If editing the main story, retain the marked inline Chapter V section. GitHub Pages should be set to **Deploy from branch → main → / (root)**. Deployment status is visible under **Actions** and **Settings → Pages**.
+Edit `index.html` directly on `main`, or create a branch before making extensive changes. Do **not** rerun `scripts/directors_cut.py` against an already revised Director's Cut: it is a one-time transformation of the older, misordered edition. Its published GitHub Actions build is recorded in commit `449e9ac`. The old iframe merger is archived to prevent undoing this work.
 
-The artwork includes original anime-inspired character studies. Dhanu's name is fixed in the story—there is no personalization field. The supporting characters are fictional illustrations rather than photographs.
+GitHub Pages: Deploy from branch → `main` → `/ (root)`. The public URL is the same.
 
-### Implementation notes
+Visual inventories and full story text are in `audit/`; `STORY_BIBLE.md` documents continuity and spoilers.
 
-- One unified self-contained HTML reader on the home URL, plus a compatibility Chapter V source file
-- Accessible button controls, a Chapter V recap, and a choice-gated finale
-- Mobile reading layout and responsive desktop view
-- Reduced-motion-aware animations
-- Existing Chapter I–III progress keys preserved across updates
+## QA
 
-See `STORY_BIBLE.md` for editorial continuity and future-chapter notes (contains spoilers).
+The GitHub Actions Director's Cut workflow validated chapter order, unique finale, embedded image data and structural invariants. Browser/device visual tests are separate; the project should be tested on iPhone Safari and desktop before gifting.
