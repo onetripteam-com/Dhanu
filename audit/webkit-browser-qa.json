@@ -1,0 +1,34 @@
+{
+  "engine": "WebKit browser engine on Ubuntu, not physical iOS Safari",
+  "tests": [
+    {
+      "viewport": 393,
+      "order": true,
+      "width": 393,
+      "heroLoaded": true,
+      "galleryButtons": 18,
+      "footerOutside": true,
+      "modalOpen": true,
+      "modalClosed": true,
+      "unlocked": true,
+      "persisted": true,
+      "reset": false,
+      "external": []
+    },
+    {
+      "viewport": 1440,
+      "order": true,
+      "width": 1440,
+      "heroLoaded": true,
+      "galleryButtons": 18,
+      "footerOutside": true,
+      "modalOpen": true,
+      "modalClosed": true,
+      "unlocked": true,
+      "persisted": true,
+      "reset": false,
+      "external": []
+    }
+  ],
+  "errors": []
+}
