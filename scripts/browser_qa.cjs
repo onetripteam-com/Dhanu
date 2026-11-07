@@ -24,7 +24,7 @@ const path=require('path');
      const picture=document.querySelector('.manifesto-opening-portrait img');
      const rect=picture?.getBoundingClientRect();
      const allImgs=[...document.querySelectorAll('img')];
-     const failed=allImgs.filter(i=>!i.complete||i.naturalWidth===0).map(x=>x.alt.slice(0,80));
+     const failed=allImgs.filter(i=>(i.loading!=='lazy'&&(!i.complete||i.naturalWidth===0))||(i.complete&&i.naturalWidth===0)).map(x=>x.alt.slice(0,80));
      const huge=[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.right>innerWidth+8&&getComputedStyle(e).position!=='fixed'}).slice(0,6).map(e=>({tag:e.tagName,cls:String(e.className).slice(0,60),right:Math.round(e.getBoundingClientRect().right)}));
      return {chapterOrder:nodeList.every(Boolean)&&nodeList.every((x,i)=>!i||nodeList[i-1].compareDocumentPosition(x)&Node.DOCUMENT_POSITION_FOLLOWING),
        chapterOffsets:nodeList.map(x=>x?.offsetTop),documentWidth:document.documentElement.scrollWidth,viewportWidth:innerWidth,
