@@ -1,10 +1,10 @@
 {
   "edition": "MANIFESTO Studio Edition II",
-  "testedAt": "2026-11-07T18:07:33.423Z",
+  "testedAt": "2026-11-07T18:09:18.915Z",
   "matrix": [
     {
       "viewport": "phone-360",
-      "loadMs": 744,
+      "loadMs": 602,
       "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
       "documentWidth": 360,
       "viewportWidth": 360,
@@ -29,7 +29,7 @@
     },
     {
       "viewport": "iphone-393",
-      "loadMs": 577,
+      "loadMs": 584,
       "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
       "documentWidth": 393,
       "viewportWidth": 393,
@@ -54,7 +54,7 @@
     },
     {
       "viewport": "iphone-402",
-      "loadMs": 580,
+      "loadMs": 575,
       "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
       "documentWidth": 402,
       "viewportWidth": 402,
@@ -79,7 +79,7 @@
     },
     {
       "viewport": "tablet-768",
-      "loadMs": 586,
+      "loadMs": 585,
       "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
       "documentWidth": 768,
       "viewportWidth": 768,
@@ -104,7 +104,7 @@
     },
     {
       "viewport": "desktop-1440",
-      "loadMs": 606,
+      "loadMs": 593,
       "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
       "documentWidth": 1440,
       "viewportWidth": 1440,
@@ -144,5 +144,28 @@
     "finaleUnlocked": true,
     "persisted": true,
     "footerVisible": true
-  }
+  },
+  "chapterScreenshots": [
+    {
+      "id": "chapter-two",
+      "top": -43677,
+      "height": 599,
+      "scroll": 53071,
+      "visible": false
+    },
+    {
+      "id": "chapter-three",
+      "top": 150,
+      "height": 570,
+      "scroll": 23415,
+      "visible": true
+    },
+    {
+      "id": "chapter-four",
+      "top": 150,
+      "height": 595,
+      "scroll": 35580,
+      "visible": true
+    }
+  ]
 }
