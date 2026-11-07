@@ -28,6 +28,7 @@ ii = re.search(r'<section\b[^>]*\bid=["\']chapter-two["\'][^>]*>', s, re.I)
 assert v and ii and v.start() < ii.start(), "Unexpected chapter structure; no destructive rewrite"
 chapter_v = s[v.start():ii.start()]
 assert 'id="ch5-story"' in chapter_v and 'id="final-choice"' in chapter_v
+print('MOVE DEBUG: articles',chapter_v.count('<article'),chapter_v.count('</article>'),'tail',repr(chapter_v[-950:]))
 assert chapter_v.count('<article') == chapter_v.count('</article>')
 s = s[:v.start()] + s[ii.start():]
 main_end = s.index("</main>")
