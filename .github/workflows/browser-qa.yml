@@ -1,0 +1,35 @@
+name: Browser QA — MANIFESTO
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/browser_qa.cjs
+      - .github/workflows/browser-qa.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          npm install --no-save playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Test three viewports and capture opening
+        run: node scripts/browser_qa.cjs
+      - name: Publish QA report and image previews
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f audit/browser-qa.json audit/preview-*.jpg || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Record Director's Cut mobile and desktop QA screenshots"
+            git push
+          fi
