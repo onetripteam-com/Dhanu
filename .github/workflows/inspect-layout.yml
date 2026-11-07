@@ -1,0 +1,23 @@
+name: Inspect MANIFESTO layout anchors
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/inspect-layout.yml]
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print HTML structure without images
+        run: |
+          python - <<'PY'
+          import re
+          s=open('index.html',encoding='utf-8').read()
+          for m in re.finditer(r'<(?:article|section|main|footer|header|nav|h1|h2|script|style)\b[^>]*>',s,re.I):
+            tag=m.group(0)
+            if tag.startswith(('<script','<style')):continue
+            print(m.start(),re.sub(r'\s+',' ',tag)[:260],repr(re.sub(r'\s+',' ',s[m.end():m.end()+130])[:130]))
+          for anchor in ['id="chapter-one"','id="chapter-two"','id="chapter-three"','id="chapter-four"','id="chapter-five"','id="ch5-story"','THE FINAL CHAPTER IS BEING WRITTEN','Chapters 01–03 of 05','MANIFESTO-CHAPTER-FIVE-INLINE:START']:
+            print('ANCHOR',anchor,[(m.start(),re.sub(r'\s+',' ',s[m.start()-160:m.start()+160])[:320]) for m in list(re.finditer(re.escape(anchor),s))[:5]])
+          PY
