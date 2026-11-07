@@ -38,7 +38,7 @@ const path=require('path');
         order:nav.join(','),
         documentWidth:document.documentElement.scrollWidth,
         viewportWidth:innerWidth,
-        brokenImages:images.filter(x=>!x.complete||!x.naturalWidth).map(x=>x.alt),
+        brokenImages:images.filter(x=>x.hasAttribute('src')&&Boolean(x.getAttribute('src'))&&(!x.complete||!x.naturalWidth)).map(x=>x.alt),
         images:images.length,
         artButtons:document.querySelectorAll('.figure-zoom').length,
         figures:figures.length,
@@ -82,10 +82,16 @@ const path=require('path');
       const end=await page.locator('#final-reveal').evaluate(e=>e.classList.contains('show'));
       await page.locator('#final-reveal').scrollIntoViewIfNeeded();
       await page.screenshot({path:path.join(out,'studio-finale-393.jpg'),type:'jpeg',quality:72,fullPage:false});
+      for(const c of ['chapter-two','chapter-three','chapter-four']){
+        await page.locator('#'+c).scrollIntoViewIfNeeded();
+        await page.screenshot({path:path.join(out,'studio-'+c+'-393.jpg'),type:'jpeg',quality:70,fullPage:false});
+      }
       await page.reload({waitUntil:'load'});
+      await page.waitForTimeout(180);
       const persisted=await page.locator('#final-reveal').evaluate(e=>e.classList.contains('show'));
       const footerVisible=await page.locator('.footer').evaluate(e=>!!e.getClientRects().length);
       report.interactions={lightbox:{open,zoomed,closed},puzzles:afterFour,finalChoiceGate:gate,finaleUnlocked:end,persisted,footerVisible};
+      if(errors.length)failed=true;
       if(!open||!zoomed||!closed||Object.values(afterFour).some(x=>!x)||!gate||!end||!persisted||!footerVisible){failed=true;console.error('INTERACTION FAILED',JSON.stringify(report.interactions))}
       console.log('INTERACTIONS',JSON.stringify(report.interactions));
     }
