@@ -936,7 +936,8 @@ function finishBell({jump=true}={}){
  bellFeedback.textContent='Dhanu frees the iron brace and straightens the counterweight. This time, the bell has room to ring.';
  bellButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.bellAction==='look')));
  if(jump)setTimeout(()=>bellReveal.scrollIntoView({behavior:motion(),block:'start'}),200);
- update();
+ // update() is invoked after the progress-state declarations are initialised.
+ // Calling it from a restored bell state before that point caused a TDZ error.
 }
 const bellMessages={
  force:'Another dull thud. Force cannot move a bell pinned by an iron brace. Dhanu looks at the mechanism again.',
