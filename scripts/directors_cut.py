@@ -31,7 +31,12 @@ assert 'id="ch5-story"' in chapter_v and 'id="final-choice"' in chapter_v
 assert chapter_v.count('<article') == 1 and chapter_v.count('</article>') == 2
 # The old Chapter I story's two wrapper divs and closing article were accidentally
 # placed *after* Chapter V. Return those closers to the end of Chapter I.
-m = re.search(r'((?:\\s*</div>){2}\\s*</article>\\s*)
+m = re.search(r'((?:\\s*</div>){2}\\s*</article>\\s*)' + chr(36),chapter_v)
+assert m, "Expected misplaced Chapter I wrapper closing tags"
+chapter_i_closers = m.group(1)
+chapter_v = chapter_v[:m.start()]
+assert chapter_v.count('<article') == chapter_v.count('</article>') == 1
+s = s[:v.start()] + chapter_i_closers + s[ii.start():]
 main_end = s.index("</main>")
 assert s.index('id="chapter-four"') < main_end
 s = s[:main_end] + '\n<!-- THE DEFINITIVE ILLUSTRATED FINALE -->\n' + chapter_v + '\n' + s[main_end:]
