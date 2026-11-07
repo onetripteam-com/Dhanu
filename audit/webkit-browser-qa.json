@@ -12,7 +12,15 @@
       "modalClosed": true,
       "unlocked": true,
       "persisted": true,
-      "reset": false,
+      "reset": true,
+      "resetState": {
+        "revealed": false,
+        "seen": [
+          "manifesto-v4-lastchapter"
+        ],
+        "unexpected": [],
+        "lastChapter": "chapter-one"
+      },
       "external": []
     },
     {
@@ -26,7 +34,15 @@
       "modalClosed": true,
       "unlocked": true,
       "persisted": true,
-      "reset": false,
+      "reset": true,
+      "resetState": {
+        "revealed": false,
+        "seen": [
+          "manifesto-v4-lastchapter"
+        ],
+        "unexpected": [],
+        "lastChapter": "chapter-one"
+      },
       "external": []
     }
   ],
