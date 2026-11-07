@@ -82,6 +82,8 @@ const path=require('path');
       const end=await page.locator('#final-reveal').evaluate(e=>e.classList.contains('show'));
       await page.locator('#final-reveal').scrollIntoViewIfNeeded();
       await page.screenshot({path:path.join(out,'studio-finale-393.jpg'),type:'jpeg',quality:72,fullPage:false});
+      // Let the finale's intentionally delayed scroll complete before checking anchors.
+      await page.waitForTimeout(400);
       report.chapterScreenshots=[];
       for(const c of ['chapter-two','chapter-three','chapter-four']){
         await page.evaluate(id=>document.getElementById(id).scrollIntoView({block:'start',behavior:'instant'}),c);
