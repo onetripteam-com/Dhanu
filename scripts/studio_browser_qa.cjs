@@ -82,8 +82,15 @@ const path=require('path');
       const end=await page.locator('#final-reveal').evaluate(e=>e.classList.contains('show'));
       await page.locator('#final-reveal').scrollIntoViewIfNeeded();
       await page.screenshot({path:path.join(out,'studio-finale-393.jpg'),type:'jpeg',quality:72,fullPage:false});
+      report.chapterScreenshots=[];
       for(const c of ['chapter-two','chapter-three','chapter-four']){
-        await page.locator('#'+c).scrollIntoViewIfNeeded();
+        await page.evaluate(id=>document.getElementById(id).scrollIntoView({block:'start',behavior:'instant'}),c);
+        await page.waitForTimeout(170);
+        const placement=await page.evaluate(id=>{
+          const e=document.getElementById(id),r=e.getBoundingClientRect();
+          return {id,top:Math.round(r.top),height:Math.round(r.height),scroll:Math.round(scrollY),visible:Math.abs(r.top)<innerHeight};
+        },c);
+        report.chapterScreenshots.push(placement);
         await page.screenshot({path:path.join(out,'studio-'+c+'-393.jpg'),type:'jpeg',quality:70,fullPage:false});
       }
       await page.reload({waitUntil:'load'});
@@ -91,9 +98,10 @@ const path=require('path');
       const persisted=await page.locator('#final-reveal').evaluate(e=>e.classList.contains('show'));
       const footerVisible=await page.locator('.footer').evaluate(e=>!!e.getClientRects().length);
       report.interactions={lightbox:{open,zoomed,closed},puzzles:afterFour,finalChoiceGate:gate,finaleUnlocked:end,persisted,footerVisible};
+      if(report.chapterScreenshots.some(x=>!x.visible))failed=true;
       if(errors.length)failed=true;
       if(!open||!zoomed||!closed||Object.values(afterFour).some(x=>!x)||!gate||!end||!persisted||!footerVisible){failed=true;console.error('INTERACTION FAILED',JSON.stringify(report.interactions))}
-      console.log('INTERACTIONS',JSON.stringify(report.interactions));
+      console.log('INTERACTIONS',JSON.stringify(report.interactions),'CHAPTER_SCREENS',JSON.stringify(report.chapterScreenshots));
     }
     await context.close();
   }
