@@ -6,9 +6,6 @@ s=p.read_text(encoding='utf-8')
 assert len(s)>3000000
 assert 'id="chapter-five"' in s and 'id="manifesto-final-launch"' not in s
 marker='<style id="manifesto-polish-pass">'
-if marker in s:
-  print('Visual polish already applied')
-  raise SystemExit(0)
 css='''<style id="manifesto-polish-pass">
 /* Keep one definitive hero shot, not two overlapping Dhanu illustrations. */
 .cover .cover-hero{display:none!important}
@@ -22,7 +19,10 @@ css='''<style id="manifesto-polish-pass">
  .cover .manifesto-opening-portrait{margin-top:24px}
 }
 </style>'''
-assert s.count('</head>')==1
-s=s.replace('</head>',css+'\n</head>',1)
+if marker not in s:
+  assert s.count('</head>') == 1
+  s=s.replace('</head>',css+'\\n</head>',1)
+# The decision asks what Dhanu will do with the minute, not what he will ask for.
+s=s.replace('What would he ask for?', 'How will he answer the watch?')
 p.write_text(s,encoding='utf-8')
 print('Visual compositional polish applied, bytes:',p.stat().st_size)
