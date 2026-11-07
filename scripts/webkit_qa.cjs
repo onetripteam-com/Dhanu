@@ -41,11 +41,16 @@ const path=require('path');
    await page.locator('#studio-reset').click();
    await page.waitForLoadState('load');
    await page.waitForTimeout(180);
-   reset=await page.evaluate(()=>{
+   const resetState=await page.evaluate(()=>{
      const seen=Object.keys(localStorage).filter(k=>/^manifesto-v[2345]-/.test(k));
-     return !document.getElementById('final-reveal').classList.contains('show') && seen.length===0;
+     const revealed=document.getElementById('final-reveal').classList.contains('show');
+     const unexpected=seen.filter(k=>k!=='manifesto-v4-lastchapter');
+     return {revealed,seen,unexpected,lastChapter:localStorage.getItem('manifesto-v4-lastchapter')};
    });
-   const info={viewport:vp.name,...basic,modalOpen,modalClosed,unlocked,persisted,reset,external};
+   // Chapter-I reading position can be saved immediately after a reset;
+   // puzzle/ending progress must all be cleared.
+   reset=!resetState.revealed&&resetState.unexpected.length===0&&(resetState.lastChapter===null||resetState.lastChapter==='chapter-one');
+   const info={viewport:vp.name,...basic,modalOpen,modalClosed,unlocked,persisted,reset,resetState,external};
    tests.push(info);
    console.log('WEBKIT',JSON.stringify(info));
    if(!basic.order||basic.width>basic.viewport+2||!basic.heroLoaded||basic.galleryButtons<10||!basic.footerOutside||!modalOpen||!modalClosed||!unlocked||!persisted||!reset||external.length)failed=true;
