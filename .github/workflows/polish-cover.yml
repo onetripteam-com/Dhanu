@@ -1,0 +1,24 @@
+name: Polish MANIFESTO Cover
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/polish_pass.py
+      - .github/workflows/polish-cover.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  polish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/polish_pass.py
+      - name: Commit clean cover
+        run: |
+          if git diff --quiet -- index.html; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Remove overlapping duplicate cover hero illustration"
+          git push
