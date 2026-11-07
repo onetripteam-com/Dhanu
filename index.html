@@ -400,6 +400,19 @@ html.has-scroll-reveal [data-reveal].is-seen{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.manifesto-opening-portrait,.manifesto-opening-portrait *{animation:none!important;transition:none!important}}
 </style>
 
+<style id="manifesto-polish-pass">
+/* Keep one definitive hero shot, not two overlapping Dhanu illustrations. */
+.cover .cover-hero{display:none!important}
+.cover .manifesto-opening-portrait{isolation:isolate;transform:none!important}
+.cover .manifesto-opening-portrait img{object-position:center center;max-height:none}
+.cover .manifesto-opening-portrait figcaption{position:relative}
+@media(min-width:901px){
+ .cover .manifesto-opening-portrait{margin-top:44px;margin-bottom:30px;box-shadow:0 20px 65px #0007}
+}
+@media(max-width:640px){
+ .cover .manifesto-opening-portrait{margin-top:24px}
+}
+</style>
 </head>
 <body>
 <div aria-hidden="true" id="progress-track"><div id="progress-bar"></div></div>
