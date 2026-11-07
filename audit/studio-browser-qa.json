@@ -1,0 +1,160 @@
+{
+  "edition": "MANIFESTO Studio Edition II",
+  "testedAt": "2026-11-07T18:04:40.993Z",
+  "matrix": [
+    {
+      "viewport": "phone-360",
+      "loadMs": 689,
+      "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
+      "documentWidth": 360,
+      "viewportWidth": 360,
+      "brokenImages": [
+        ""
+      ],
+      "images": 49,
+      "artButtons": 18,
+      "figures": 12,
+      "hero": {
+        "loaded": true,
+        "width": 320,
+        "height": 200,
+        "top": 298
+      },
+      "footerOutsideFinale": true,
+      "oneFinale": true,
+      "outdatedText": false,
+      "dialogExists": true,
+      "chapterFiveBodyFont": "Georgia, serif",
+      "gridColumns": "minmax(0px, 0.95fr) minmax(0px, 1.05fr)",
+      "errors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": "iphone-393",
+      "loadMs": 667,
+      "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
+      "documentWidth": 393,
+      "viewportWidth": 393,
+      "brokenImages": [
+        ""
+      ],
+      "images": 49,
+      "artButtons": 18,
+      "figures": 12,
+      "hero": {
+        "loaded": true,
+        "width": 353,
+        "height": 221,
+        "top": 298
+      },
+      "footerOutsideFinale": true,
+      "oneFinale": true,
+      "outdatedText": false,
+      "dialogExists": true,
+      "chapterFiveBodyFont": "Georgia, serif",
+      "gridColumns": "minmax(0px, 0.95fr) minmax(0px, 1.05fr)",
+      "errors": [
+        "Cannot access 'pending' before initialization"
+      ],
+      "externalRequests": []
+    },
+    {
+      "viewport": "iphone-402",
+      "loadMs": 663,
+      "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
+      "documentWidth": 402,
+      "viewportWidth": 402,
+      "brokenImages": [
+        ""
+      ],
+      "images": 49,
+      "artButtons": 18,
+      "figures": 12,
+      "hero": {
+        "loaded": true,
+        "width": 362,
+        "height": 226,
+        "top": 298
+      },
+      "footerOutsideFinale": true,
+      "oneFinale": true,
+      "outdatedText": false,
+      "dialogExists": true,
+      "chapterFiveBodyFont": "Georgia, serif",
+      "gridColumns": "minmax(0px, 0.95fr) minmax(0px, 1.05fr)",
+      "errors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": "tablet-768",
+      "loadMs": 660,
+      "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
+      "documentWidth": 768,
+      "viewportWidth": 768,
+      "brokenImages": [
+        ""
+      ],
+      "images": 49,
+      "artButtons": 18,
+      "figures": 12,
+      "hero": {
+        "loaded": true,
+        "width": 644,
+        "height": 443,
+        "top": 372
+      },
+      "footerOutsideFinale": true,
+      "oneFinale": true,
+      "outdatedText": false,
+      "dialogExists": true,
+      "chapterFiveBodyFont": "Georgia, serif",
+      "gridColumns": "minmax(0px, 0.95fr) minmax(0px, 1.05fr)",
+      "errors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": "desktop-1440",
+      "loadMs": 665,
+      "order": "chapter-one,chapter-two,chapter-three,chapter-four,chapter-five",
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "brokenImages": [
+        ""
+      ],
+      "images": 49,
+      "artButtons": 18,
+      "figures": 12,
+      "hero": {
+        "loaded": true,
+        "width": 487,
+        "height": 335,
+        "top": 225
+      },
+      "footerOutsideFinale": true,
+      "oneFinale": true,
+      "outdatedText": false,
+      "dialogExists": true,
+      "chapterFiveBodyFont": "Georgia, serif",
+      "gridColumns": "442.172px 488.719px",
+      "errors": [],
+      "externalRequests": []
+    }
+  ],
+  "interactions": {
+    "lightbox": {
+      "open": true,
+      "zoomed": true,
+      "closed": true
+    },
+    "puzzles": {
+      "route": true,
+      "signal": true,
+      "bell": true,
+      "archive": true
+    },
+    "finalChoiceGate": true,
+    "finaleUnlocked": true,
+    "persisted": true,
+    "footerVisible": true
+  }
+}
