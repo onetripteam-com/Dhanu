@@ -36,3 +36,10 @@ V. **The Hour You Choose — standalone finale published.** The future Dhanu wro
 - Puzzles only when they reveal character or important information; all must be skippable and accessible.
 - No real people’s photos, no copying licensed anime characters or cinematic imagery.
 - Maintain iPhone Safari compatibility, reduced-motion support, offline play and no account.
+
+
+## Director's Cut decision (2026-11-07)
+
+The canonical published narrative is the five-chapter illustrated `index.html`, in order I–V. The original illustrated Chapter V was moved from directly after Chapter I to the end of Chapter IV; the duplicate full-screen standalone reader was removed. The conclusion stresses that the older Dhanu gives the last gear freely, fulfilling Chapter IV's final warning. The alternate standalone `chapter-five.html` remains for historical reference but must not be reintroduced into the main story.
+
+The new cover uses the original rainlit Dhanu/Nix illustration to introduce his face clearly before the plot. Keep its focal points visible in mobile and desktop layouts.
