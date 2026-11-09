@@ -1,47 +1,52 @@
-# MANIFESTO — Continuity notes (SPOILERS)
+# MANIFESTO: REWIND — Definitive Story Bible (SPOILERS)
 
-## The premise
+## Creative premise
 
-At 11:59 p.m., just before Dhanu's birthday, time freezes. A mysterious letter in his own handwriting, dated a year from now, guides him toward a legendary watch. The watch is not a shortcut to destiny: its four mechanisms reflect how a person lives through uncertainty. The project takes thematic inspiration from freedom, determination, discipline, courage and connection, but uses original characters, setting and narrative.
+This edition is a playful action-adventure first and a birthday story second. It combines original anime-style character art, escalating danger, comedic banter, real gameplay and an emotionally earned midnight.
 
-## Fixed characters
+**The inciting incident:** At 11:59 PM on the night before his birthday, Dhanu sees the world freeze. Nix delivers a letter signed by Dhanu one year in the future. Someone promised the first minute of his next birthday to the clockwork Collector. A promise can be cancelled only by its maker, and the Collector refuses to release anything once locked.
 
-- **Dhanu:** Hero, with original dark tousled hair, navy coat, off-white shirt, red sash, brass compass and wristwatch. He is always the protagonist; there is no public name editor. Use varied action, study, reaction and close-up artwork that retains his core identity.
-- **Nix:** Witty copper-ringed storm petrel. Not a raven.
-- **The other Dhanu:** A possible future self frightened by life's risk and uncertainty. First encountered aboard the flagless ferry.
-- **Sanjay:** Dhanu's best friend, a small but plot-critical Chapter II radio cameo. Further appearances should be justified, not token.
-- **Siri:** Dhanu's girlfriend, whose recorded call in Chapter IV is key evidence that the other Dhanu interfered before midnight. She has an illustrated maroon-clad explorer visual.
-- **Praju, Manu, Aisha, Uha:** Supporting friends available if a future beat needs them. Avoid forced roll-call scenes.
+**Conflict:** Each realm has guards or bosses defending the locked minute. Dhanu gradually learns that strength without adjustment is not enough, and that his future self was motivated by fear, not evil.
 
-## Chapters
+**Arc:** From "my birthday was ruined" to "tomorrow doesn't have to be guaranteed to be worth living." Do not replace the final confrontation with a generic fight. The violent obstacle is the Collector; the emotional obstacle is future Dhanu.
 
-I. **Eleven Fifty-Nine.** Frozen city, Nix's delivery, letter from a future Dhanu, canal route puzzle and flagless ferry. End: an impossible man has Dhanu's face.
+## Fixed characters and voices
 
-II. **The Ship of Forgotten Tomorrows.** The Sea of Almosts, ships of unmade decisions, Sanjay's brief radio guidance and interactive storm beacons. First gear: **BEGIN**. A possible Dhanu is trapped by choices he never made.
+- **Dhanu** — charismatic dark-haired young adventurer, navy coat, red sash, brass compass. The protagonist. Fast-thinking and brave, but impulsive, irreverent, sometimes wrong. Wins the fights and makes the final decision himself.
+- **Nix** — black storm petrel with white throat and copper leg ring. The main comic relief. Sarcastic but reliable. He becomes quiet during future Dhanu's serious admission, then gets the final gag.
+- **Sanjay** — sensible best friend. Signals from outside the frozen sea and later identifies the Collector's repeating combat pattern. Dry banter, never takes over the heroic role.
+- **Siri** — Dhanu's girlfriend; capable, witty, practical. Finds the Vesper transaction and helps Dhanu infiltrate the archive. Critiques his excuses without being reduced to a spectator.
+- **The Echo** — on the ghost ship, a possible future who never left. Not the real depositor; a residue of decisions unmade.
+- **The Bellkeeper** — has struck the jammed bell a thousand times with no result. Learns to change the mechanism.
+- **The Collector** — primary physical antagonist, an original gold-and-iron armoured clockwork enforcer. He enforces old bargains with brutal certainty. Does not care whether keeping time imprisoned hurts people.
+- **Future Dhanu** — the actual depositor. Wrote the letter, reserved the minute and hoped to eliminate uncertainty. Not physically evil; needs to give away the last gear of his own accord.
+- **Iron Mariner, Clock Ogre, Minute Hunters, Clockguards** — escalation foes and gameplay opponents. Not copied from existing anime franchises.
 
-III. **The Thousandth Morning.** Bellkeeper has attempted to ring a jammed bell 999 times. The lesson is to examine the mechanism and change your approach, not simply work harder. Second gear: **RETURN**. The last second returns. The old letter reveals: **'The minute was never stolen. It was promised.'** A walled city appears.
+## Canon episode beats
 
-IV. **The City Behind the Wall.** Vesper is a city that accounts for surrendered, reserved, and returned hours. A frozen queue, the Office of Unspent Tomorrows, an archivist, a mysterious deposit slip, and a recorded call from Siri. Evidence puzzle requires distinguishing **depositor** from **beneficiary**. Dhanu is the beneficiary: someone with his face reserved the missing minute for him. Third gear: **WITNESS**. The other Dhanu wears the fourth gear and refuses to relinquish it. Final warning: **'The last piece cannot be taken; it must be given.'**
+**01 / THE BIRTHDAY HEIST.** Siri and Sanjay tease Dhanu via messages at 11:59. Time freezes; Nix delivers the future letter; Minute Hunters chase him across the roofline. Dhanu survives the five-round reaction chase and reaches the flagless ship.
 
-V. **The Hour You Choose — canonical illustrated finale in index.html.** The real older Dhanu wrote the future letter and reserved the missing birthday minute through Vesper. The man on the ferry was an echo of a possible future he never dared to leave. The letter's claim of theft was an intentional exaggeration to make the younger Dhanu seek the minute; he admits it was always a promise. Through the final choice, Dhanu cannot seize CHOOSE, destroy time, or bargain for a perfect future. He must offer his older self a choice. The last gear is **given freely**, completing BEGIN, RETURN, WITNESS, CHOOSE. Midnight arrives, followed by a warm, friendship-centred birthday reveal.
+**02 / THE SHIP THAT FIGHTS BACK.** Ghost ships are abandoned futures; some attack with memories. Sanjay gives directions over the radio. Dhanu defeats the Iron Mariner via correct Strike/Guard/Dash moves and receives BEGIN from the shipborne Echo.
 
-**Definitive continuity rules:** The one-page, illustrated `index.html` is the source of truth, in chapters I–V. The self-contained `chapter-five.html` contains an earlier alternate version and is archived, not part of the reader's journey. The final puzzle uses existing `manifesto-v5-final` progress and the choice identifiers `keep`, `break`, `return` internally; the reader-visible choices are **Demand the gear**, **Make another bargain**, **Offer him a choice**. The third is the only action that unlocks the finale. All skipped puzzles remain valid progress. Do not retcon the earlier ship's echo into a separate villain or imply the watch predicts destiny.
+**03 / THE THOUSANDTH BELL.** The mountain's Clock Ogre grows stronger each time the Bellkeeper repeats the same mistake. Dhanu releases the brace, aligns the counterweight and rings the bell once. RETURN is freed. The letter reveals the minute was promised, not stolen.
 
-**Tone guidance:** Dhanu makes every consequential choice; do not substitute Siri or Sanjay for the protagonist. Nix is sharp and funny in transitions, quieter during important admissions. Keep the final birthday wish human rather than motivational. The timepiece is a symbol of agency, not a literal means of controlling other people's futures.
+**04 / THE IMPOSSIBLE BREAK-IN.** Siri and Dhanu infiltrate Vesper's archive, exchanging jokes while pursued by Clockguards. The three clues yield the code 4-1-3. The record shows Dhanu is the beneficiary; the depositor is future Dhanu. He receives WITNESS.
 
-## Visual rules for future revisions
+**05 / THE LAST SIXTY SECONDS.** Dhanu survives the Collector's escalating seven-move pattern and shatters his mechanical body. The clock still doesn't move. Future Dhanu admits why he reserved the minute. Dhanu cannot force CHOOSE; only the line "We don't need a perfect tomorrow. We need our own" convinces his future self to give it freely. The clock strikes 12:00. Sanjay and the crew's birthday message closes the story, followed by a seed-in-an-envelope Nix gag.
 
-- Reader-first illustrated storytelling; make images and camera angles deliberate.
-- Keep Dhanu's face/costume coherent across running, turning, studying and reaching poses.
-- The four new poses in Edition 04 are generated character illustrations, and Vesper / the clockwork archive feature new cinematic environment art.
-- Keep Siri, Sanjay and other friends in supporting roles. Dhanu must make the pivotal choices.
-- Puzzles only when they reveal character or important information; all must be skippable and accessible.
-- No real people’s photos, no copying licensed anime characters or cinematic imagery.
-- Maintain iPhone Safari compatibility, reduced-motion support, offline play and no account.
+## Gameplay rules
 
+- Five proper challenges, all replayable after progress reset, all skippable via an intentional Story Mode control.
+- No combat action involves graphic violence. All enemies are fantastical constructs.
+- The wrong move should have consequences, clear readable feedback and a recovery path.
+- Do not silently gate the reader behind inaccessible controls. Touch, keyboard, reduced motion and focus visibility matter.
+- Chapter navigation is free, but the ethical final choice is only presented after the Collector is defeated or intentionally skipped.
+- Save only the story's progress under `manifesto-rewind:v1:` localStorage keys; do not require login or cloud APIs.
 
-## Director's Cut decision (2026-11-07)
+## Visual rules
 
-The canonical published narrative is the five-chapter illustrated `index.html`, in order I–V. The original illustrated Chapter V was moved from directly after Chapter I to the end of Chapter IV; the duplicate full-screen standalone reader was removed. The conclusion stresses that the older Dhanu gives the last gear freely, fulfilling Chapter IV's final warning. The alternate standalone `chapter-five.html` remains for historical reference but must not be reintroduced into the main story.
+A distinct navy, copper, ivory and muted sea-green palette. Full-bleed existing illustrations at dramatic beats; speech panels with human conversation in between; stylised CSS clockwork opponents for interactive battles. Dhanu should be visible near the top of the mobile opening. Avoid tiny dialogue text baked into imagery. Use cinematic framing rather than covering faces with decoration.
 
-The new cover uses the original rainlit Dhanu/Nix illustration to introduce his face clearly before the plot. Keep its focal points visible in mobile and desktop layouts.
+**Artwork provenance:** Original self-contained assets were retained from Studio Edition II; 18 images appear in this build, and the earlier complete edition is archived. No new custom-painted fight keyframes have been claimed. For future art upgrades, update source illustrations in a controlled way and regenerate the single HTML.
+
+The earlier "MANIFESTO — The Missing Minute" chapters and the alternate standalone `chapter-five.html` are historical versions, not authoritative for this reboot.
