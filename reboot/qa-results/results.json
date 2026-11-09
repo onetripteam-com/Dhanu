@@ -1,0 +1,138 @@
+{
+  "version": "MANIFESTO REWIND",
+  "tests": [
+    {
+      "name": "chromium-360",
+      "order": true,
+      "hasFiveChallenges": true,
+      "images": 18,
+      "brokenImages": [],
+      "width": 360,
+      "viewportWidth": 360,
+      "hero": {
+        "loaded": true,
+        "width": 316,
+        "height": 198
+      },
+      "title": "MANIFESTO: REWIND — Dhanu's Missing Minute",
+      "links": 6,
+      "choices": 3,
+      "hash": "",
+      "external": [],
+      "errors": []
+    },
+    {
+      "name": "chromium-393",
+      "order": true,
+      "hasFiveChallenges": true,
+      "images": 18,
+      "brokenImages": [],
+      "width": 393,
+      "viewportWidth": 393,
+      "hero": {
+        "loaded": true,
+        "width": 349,
+        "height": 218
+      },
+      "title": "MANIFESTO: REWIND — Dhanu's Missing Minute",
+      "links": 6,
+      "choices": 3,
+      "hash": "",
+      "external": [],
+      "errors": []
+    },
+    {
+      "name": "chromium-402",
+      "order": true,
+      "hasFiveChallenges": true,
+      "images": 18,
+      "brokenImages": [],
+      "width": 402,
+      "viewportWidth": 402,
+      "hero": {
+        "loaded": true,
+        "width": 358,
+        "height": 224
+      },
+      "title": "MANIFESTO: REWIND — Dhanu's Missing Minute",
+      "links": 6,
+      "choices": 3,
+      "hash": "",
+      "external": [],
+      "errors": []
+    },
+    {
+      "name": "chromium-1440",
+      "order": true,
+      "hasFiveChallenges": true,
+      "images": 18,
+      "brokenImages": [],
+      "width": 1440,
+      "viewportWidth": 1440,
+      "hero": {
+        "loaded": true,
+        "width": 638,
+        "height": 684
+      },
+      "title": "MANIFESTO: REWIND — Dhanu's Missing Minute",
+      "links": 6,
+      "choices": 3,
+      "hash": "",
+      "external": [],
+      "errors": []
+    },
+    {
+      "name": "webkit-393",
+      "order": true,
+      "hasFiveChallenges": true,
+      "images": 18,
+      "brokenImages": [],
+      "width": 393,
+      "viewportWidth": 393,
+      "hero": {
+        "loaded": true,
+        "width": 349,
+        "height": 218
+      },
+      "title": "MANIFESTO: REWIND — Dhanu's Missing Minute",
+      "links": 6,
+      "choices": 3,
+      "hash": "",
+      "external": [],
+      "errors": []
+    },
+    {
+      "name": "webkit-1440",
+      "order": true,
+      "hasFiveChallenges": true,
+      "images": 18,
+      "brokenImages": [],
+      "width": 1440,
+      "viewportWidth": 1440,
+      "hero": {
+        "loaded": true,
+        "width": 638,
+        "height": 684
+      },
+      "title": "MANIFESTO: REWIND — Dhanu's Missing Minute",
+      "links": 6,
+      "choices": 3,
+      "hash": "",
+      "external": [],
+      "errors": []
+    }
+  ],
+  "functional": {
+    "chase": true,
+    "sea": true,
+    "wrongMoveHealth": true,
+    "bell": true,
+    "bellEarlyStrike": true,
+    "vault": true,
+    "collector": true,
+    "finalChoiceGate": true,
+    "endingSaved": true,
+    "reset": true
+  },
+  "errors": []
+}
