@@ -384,3 +384,7 @@ em{font-family:var(--serif);font-weight:400}
  .cover-illustration{margin:2px 0 16px}
  .cover-illustration img{aspect-ratio:16/10;object-position:50% 44%}
 }
+
+/* Keep artwork and its caption clear at phone sizes: the episode stamp
+   belongs to the desktop poster, not over the final caption line. */
+@media(max-width:750px){.cover-illustration::after{display:none}}
