@@ -1,0 +1,64 @@
+name: Build MANIFESTO REWIND — Anime Action Edition
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'reboot/build.py'
+      - 'reboot/story.html'
+      - 'reboot/style.css'
+      - 'reboot/game.js'
+      - 'reboot/qa.cjs'
+      - '.github/workflows/reboot.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  reboot:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compile the original-art-preserving story
+        run: |
+          python -m py_compile reboot/build.py
+          node --check reboot/game.js
+          node --check reboot/qa.cjs
+          python reboot/build.py
+      - name: Check static structure and all embedded artwork
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          import re,base64
+          s=Path('index.html').read_text('utf8')
+          assert '<title>MANIFESTO: REWIND' in s
+          assert all(s.count('id="'+x+'"')==1 for x in ['home','prologue','act1','act2','act3','act4','act5','birthday-ending','chase-game','vault-game','bell-game'])
+          a=[s.index('id="act'+str(i)+'"') for i in range(1,6)]
+          assert a==sorted(a)
+          imgs=re.findall(r'data:image/(?:png|jpeg|webp|svg\+xml);base64,([A-Za-z0-9+/=]+)',s)
+          assert len(imgs)>=18,len(imgs)
+          for data in imgs:base64.b64decode(data,validate=True)
+          assert 'https://' not in s and 'http://' not in s
+          print('Single HTML valid,',len(imgs),'embedded illustrations,',len(s),'bytes')
+          PY
+      - name: Install browser engines
+        run: |
+          npm install --no-save playwright@1.58.2
+          npx playwright install --with-deps chromium webkit
+      - name: Test action games and visual design
+        run: node reboot/qa.cjs
+      - name: Publish new website only after QA succeeds
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html archive/studio-edition-ii.html reboot/build-report.json
+          git add -f reboot/qa-results/results.json reboot/qa-results/*.jpg
+          if git diff --cached --quiet; then
+            echo "No changes to publish"; exit 0
+          fi
+          git commit -m "Release MANIFESTO REWIND: five action episodes and playable boss fights"
+          git pull --rebase origin main
+          git push
