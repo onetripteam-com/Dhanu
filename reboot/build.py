@@ -62,7 +62,7 @@ html=html.replace("__STYLE__",css).replace("__SCRIPT__",js)
 assert html.count("<html")==1 and html.count("</html>")==1
 assert len(html)>2000000
 assert len(re.findall(r"data:image/[^;,]+;base64,",html))>=15
-assert "Manifesto: Rewind" in html
+assert "MANIFESTO: REWIND" in html
 assert "font-face" not in html and 'https://' not in html, "Unexpected external dependency"
 # Never overwrite the old built edition until fully compiled.
 ROOT.joinpath("reboot").mkdir(exist_ok=True)
