@@ -24,6 +24,7 @@ const assert=require('assert').strict;
   await page.waitForTimeout(250);
   const basics=await page.evaluate(async()=>{
    const images=[...document.images];
+   images.forEach(img=>img.loading='eager');
    await Promise.all(images.map(img=>img.decode().catch(()=>null)));
    const sections=['act1','act2','act3','act4','act5'].map(x=>document.getElementById(x));
    const picture=document.querySelector('.cover-illustration img');
