@@ -1,0 +1,58 @@
+{
+  "results": [
+    {
+      "viewport": 360,
+      "width": 360,
+      "images": 0,
+      "chapters": [
+        "act1",
+        "act2",
+        "act3",
+        "act4",
+        "act5"
+      ],
+      "portrait": 950,
+      "buttons": 6,
+      "errors": []
+    },
+    {
+      "viewport": 393,
+      "width": 393,
+      "images": 0,
+      "chapters": [
+        "act1",
+        "act2",
+        "act3",
+        "act4",
+        "act5"
+      ],
+      "portrait": 950,
+      "buttons": 6,
+      "errors": []
+    },
+    {
+      "viewport": 1440,
+      "width": 1440,
+      "images": 0,
+      "chapters": [
+        "act1",
+        "act2",
+        "act3",
+        "act4",
+        "act5"
+      ],
+      "portrait": 950,
+      "buttons": 6,
+      "errors": []
+    }
+  ],
+  "games": {
+    "chase": true,
+    "sea": true,
+    "bell": true,
+    "vault": true,
+    "collector": true,
+    "choiceGate": true,
+    "endingPersisted": true
+  }
+}
