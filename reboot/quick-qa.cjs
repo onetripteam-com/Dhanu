@@ -17,13 +17,13 @@ const assert=require('assert').strict;
    await page.goto(url,{waitUntil:'load'});
    const x=await page.evaluate(async()=>{
     const imgList=[...document.images]; imgList.forEach(i=>i.loading='eager'); await Promise.all(imgList.map(i=>i.decode().catch(()=>null)));
-    return {width:document.documentElement.scrollWidth,viewport:innerWidth,images:[...document.images].filter(i=>!i.naturalWidth).length,chapters:[...document.querySelectorAll('.episode[id]')].map(x=>x.id),portrait:document.querySelector('.cover-illustration img').naturalWidth,portraitTop:Math.round(document.querySelector('.cover-illustration').getBoundingClientRect().top),buttons:document.querySelectorAll('[data-move]').length};
+    return {width:document.documentElement.scrollWidth,viewport:innerWidth,images:[...document.images].filter(i=>!i.naturalWidth).length,chapters:[...document.querySelectorAll('.episode[id]')].map(x=>x.id),portrait:document.querySelector('.cover-illustration img').naturalWidth,portraitTop:Math.round(document.querySelector('.cover-illustration').getBoundingClientRect().top),posterStamp:getComputedStyle(document.querySelector('.cover-illustration'),'::after').display,buttons:document.querySelectorAll('[data-move]').length};
    });
    assert(x.images===0,'image load');
    assert(x.width<=x.viewport+2,'horizontal overflow '+width);
    assert(x.chapters.join(',')==='act1,act2,act3,act4,act5','chapter order');
    assert(x.portrait>0&&x.buttons===6,'portrait and combat controls');
-   if(width<600)assert(x.portraitTop<640,'hero artwork must be visible in mobile first screen; top='+x.portraitTop);
+   if(width<600){assert(x.portraitTop<640,'hero artwork must be visible in mobile first screen; top='+x.portraitTop);assert(x.posterStamp==='none','mobile poster stamp should not obscure artwork caption')}
    if(width===393){
     await page.screenshot({path:'reboot/quick-mobile.jpg',type:'jpeg',quality:70});
     const click=async s=>page.locator(s).click({timeout:15000});
