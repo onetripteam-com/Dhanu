@@ -363,3 +363,24 @@ em{font-family:var(--serif);font-weight:400}
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
 }
+
+/* REWIND-HERO-FIRST: on phones introduce Dhanu before explaining the premise. */
+@media(max-width:750px){
+ .cover{display:grid;grid-template-columns:minmax(0,1fr);align-items:start;justify-items:stretch;row-gap:13px;min-height:auto}
+ .cover-copy{display:contents}
+ .cover-copy>.eyebrow{grid-row:1;margin:0}
+ .cover h1{grid-row:2;margin:9px 0 6px}
+ .cover-illustration{grid-row:3;margin:8px 0 14px;max-width:none;width:100%}
+ .cover-illustration img{aspect-ratio:16/10;object-fit:cover;object-position:center 45%}
+ .cover-kicker{grid-row:4;margin:0}
+ .cover-deck{grid-row:5;margin:10px 0 7px}
+ .cover-actions{grid-row:6;margin-top:6px}
+ .cover-bottom{grid-row:7;margin-top:22px}
+ .cover-scroll{bottom:18px}
+}
+@media(max-width:500px){
+ .cover h1{font-size:clamp(50px,12.6vw,70px);margin:9px 0 4px}
+ .cover h1 span{font-size:clamp(69px,15.3vw,86px)}
+ .cover-illustration{margin:2px 0 16px}
+ .cover-illustration img{aspect-ratio:16/10;object-position:50% 44%}
+}
