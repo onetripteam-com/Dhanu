@@ -1,0 +1,47 @@
+name: Release MANIFESTO REWIND — Fast Verified Build
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'reboot/quick-qa.cjs'
+      - '.github/workflows/reboot-quick.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compile the new five-episode HTML
+        run: |
+          python -m py_compile reboot/build.py
+          node --check reboot/game.js
+          node --check reboot/quick-qa.cjs
+          python reboot/build.py
+      - name: Use preinstalled Chrome if available
+        run: |
+          npm install --no-save playwright@1.58.2
+          CHROME_BIN=$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || true)
+          if [ -n "$CHROME_BIN" ]; then
+            echo "CHROME_PATH=$CHROME_BIN" >> "$GITHUB_ENV"
+            echo "Using system Chrome: $CHROME_BIN"
+          else
+            echo "Installing headless Chromium shell"
+            npx playwright install chromium --only-shell
+          fi
+      - name: Exercise all five games on actual browser layouts
+        run: node reboot/quick-qa.cjs
+      - name: Publish only after smoke tests pass
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html archive/studio-edition-ii.html reboot/build-report.json
+          git add -f reboot/quick-qa.json reboot/quick-mobile.jpg reboot/quick-ending.jpg
+          git commit -m "Launch MANIFESTO REWIND: playable anime birthday adventure"
+          git pull --rebase origin main
+          git push
