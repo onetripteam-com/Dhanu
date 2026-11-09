@@ -13,6 +13,7 @@
       ],
       "portrait": 950,
       "portraitTop": 308,
+      "posterStamp": "none",
       "buttons": 6,
       "errors": []
     },
@@ -29,6 +30,7 @@
       ],
       "portrait": 950,
       "portraitTop": 290,
+      "posterStamp": "none",
       "buttons": 6,
       "errors": []
     },
@@ -45,6 +47,7 @@
       ],
       "portrait": 950,
       "portraitTop": 187,
+      "posterStamp": "block",
       "buttons": 6,
       "errors": []
     }
