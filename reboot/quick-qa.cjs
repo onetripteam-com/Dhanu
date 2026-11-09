@@ -16,7 +16,7 @@ const assert=require('assert').strict;
    page.on('pageerror',e=>errors.push(e.message));
    await page.goto(url,{waitUntil:'load'});
    const x=await page.evaluate(async()=>{
-    await Promise.all([...document.images].map(i=>i.decode().catch(()=>null)));
+    const imgList=[...document.images]; imgList.forEach(i=>i.loading='eager'); await Promise.all(imgList.map(i=>i.decode().catch(()=>null)));
     return {width:document.documentElement.scrollWidth,viewport:innerWidth,images:[...document.images].filter(i=>!i.naturalWidth).length,chapters:[...document.querySelectorAll('.episode[id]')].map(x=>x.id),portrait:document.querySelector('.cover-illustration img').naturalWidth,buttons:document.querySelectorAll('[data-move]').length};
    });
    assert(x.images===0,'image load');
