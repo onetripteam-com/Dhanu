@@ -12,6 +12,7 @@
         "act5"
       ],
       "portrait": 950,
+      "portraitTop": 308,
       "buttons": 6,
       "errors": []
     },
@@ -27,6 +28,7 @@
         "act5"
       ],
       "portrait": 950,
+      "portraitTop": 290,
       "buttons": 6,
       "errors": []
     },
@@ -42,6 +44,7 @@
         "act5"
       ],
       "portrait": 950,
+      "portraitTop": 187,
       "buttons": 6,
       "errors": []
     }
