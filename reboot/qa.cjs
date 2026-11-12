@@ -61,6 +61,8 @@ const assert=require('assert').strict;
       await page.waitForTimeout(660);
     }
     assert(await page.locator('#reward-chase').isVisible(),'chase reward');
+    assert(await page.locator('#continue-story').isVisible(),'continue appears after first mission');
+    assert(await page.locator('#continue-story').getAttribute('href')==='#act2','continue points to next mission');
 
     await fire('[data-combat="sea"] .battle-start');
     await fire('[data-combat="sea"] [data-move="strike"]'); // deliberate wrong move
@@ -96,7 +98,16 @@ const assert=require('assert').strict;
     assert(await page.locator('#birthday-ending').isVisible(),'birthday ending');
     await page.screenshot({path:path.join(reportDir,'finale.jpg'),type:'jpeg',quality:70,fullPage:false});
     const completed=await page.evaluate(()=>Object.keys(localStorage).filter(k=>k.startsWith('manifesto-rewind:v1:')).sort());
-    assert(completed.length===6,'all progress stored: '+completed);
+    for(const id of ['chase','sea','bell','vault','collector','ending'])assert(completed.includes('manifesto-rewind:v1:'+id),'missing completion '+id);
+    assert(await page.locator('#story-clock').innerText()==='12:00','the clock must move after the finale');
+    await fire('#keepsake-letter summary');
+    assert(await page.locator('#gift-note-content').isVisible(),'signed keepsake opens');
+    assert((await page.locator('#gift-note-content').innerText()).includes('later than I wanted'),'belated gift note');
+    const downloadWait=page.waitForEvent('download');
+    await fire('#keep-letter');
+    const noteDownload=await downloadWait;
+    assert(noteDownload.suggestedFilename()==='A-Note-For-Dhanu.txt','downloadable personal note');
+    assert(await page.locator('#continue-story').getAttribute('href')==='#birthday-ending','resume should revisit completed ending');
     await page.reload({waitUntil:'load'});
     assert(await page.locator('#birthday-ending').isVisible(),'finale persists');
     assert(await page.locator('#reward-collector').isVisible(),'collector persists');

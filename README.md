@@ -20,6 +20,15 @@ The five episodes:
 
 The reboot introduces more action, genuine game controls, character-specific jokes, improved pacing, a prominent hero-first opening on phones, and a more visually dramatic finale.
 
+## Gift experience upgrades (November 2026)
+
+- **Continue your adventure** reopens the latest meaningful chapter; the cover remembers progress in the same browser without a login. Completing a chapter updates the visible **5-mission progress trail** and the episode map.
+- **Living story clock:** the cover watch reads **11:59** while the minute is locked, then **12:00** once the ending is earned.
+- **One last envelope:** after the post-credits gag, Dhanu can open a personal message from Sanjay, acknowledging the belated gift without changing the plot or making up private memories.
+- **Keep this note** downloads that message as an offline text keepsake. No network call or analytics.
+- Small-screen title improvements and screen-reader-friendly lane hints.
+- Original BEGIN / RETURN / WITNESS / CHOOSE progression, character voices, artwork, fights, and optional Story Mode are unchanged.
+
 ## Controls and progress
 
 - Touch the on-screen buttons, or use **1 / 2 / 3** for rooftop lanes and for **Strike / Guard / Dash** in an active fight.
@@ -28,7 +37,7 @@ The reboot introduces more action, genuine game controls, character-specific jok
 - The Vesper vault uses a code derived from three illustrated clues.
 - The final dialogue choice unlocks the birthday ending after defeating or skipping the Collector.
 - Every game has **Story Mode · Skip** for readers who prefer the narrative.
-- Progress stays in **localStorage on that browser**. **Reset Missions & Replay** clears only the new MANIFESTO: REWIND progress after confirmation.
+- Progress and a last-visited episode bookmark stay in **localStorage on that browser**. **Reset Missions & Replay** clears only the new MANIFESTO: REWIND progress after confirmation.
 - The top **EPISODES** menu allows free navigation; puzzles are never an involuntary trap.
 
 ## Edit the project

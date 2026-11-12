@@ -388,3 +388,57 @@ em{font-family:var(--serif);font-weight:400}
 /* Keep artwork and its caption clear at phone sizes: the episode stamp
    belongs to the desktop poster, not over the final caption line. */
 @media(max-width:750px){.cover-illustration::after{display:none}}
+
+/* The living story-clock, progress trail and personal keepsake */
+.btn-resume{background:#a2c9bc;color:#0d252a;border-color:#b9e2d0}
+.btn-resume:hover{background:#c5eee0}
+.cover-progress{margin:13px 0 0;color:#b9c9c4;font:600 12px/1.6 var(--sans);letter-spacing:.025em}
+.story-watch{display:inline-flex;align-items:center;gap:8px;color:#f4d29d!important}
+.story-watch strong{font:600 17px/1 var(--serif);letter-spacing:.015em;color:#ffe7ba}
+.mission-status-strip{display:grid;grid-template-columns:1fr auto;align-items:center;gap:13px;max-width:780px;margin:0 auto 30px;border:1px solid #9f876965;border-radius:6px;padding:18px 21px;background:linear-gradient(110deg,#1b303b,#11212c)}
+.mission-status-strip>span{font:800 10px/1.4 var(--sans);letter-spacing:.13em;color:#d7af7f}
+.mission-status-strip>strong{font:800 11px/1.4 var(--sans);letter-spacing:.075em;color:#d8e8df;text-align:right}
+.mission-meter{height:5px;background:#485358;grid-column:1/-1;border-radius:10px;overflow:hidden}
+.mission-meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#d4ab76,#9cc6b6);transition:width .35s ease}
+.mission-grid a.cleared{border-color:#8eb7a18c;background:linear-gradient(165deg,#183a3c,#0c242d)}
+.mission-grid a>.mission-state{margin-top:auto;font:800 10px/1.3 var(--sans);letter-spacing:.1em;color:#d2b386}
+.mission-grid a.cleared>.mission-state{color:#a5d8c5}
+.keepsake{max-width:800px;margin:96px auto 75px;text-align:left;scroll-margin-top:95px}
+.keepsake>summary{display:flex;align-items:center;gap:28px;min-height:144px;padding:24px 30px;border:1px solid #ba95688c;background:linear-gradient(110deg,#263c43,#15242e);cursor:pointer;list-style:none;box-shadow:0 22px 60px #0007;transition:border-color .2s,transform .2s}
+.keepsake>summary:hover{border-color:#f1c993;transform:translateY(-2px)}
+.keepsake>summary::-webkit-details-marker{display:none}
+.keepsake-seal{display:grid;place-items:center;flex:0 0 76px;height:76px;border:1px solid #d8b57d;border-radius:50%;font:45px var(--serif);color:#e8bf88;box-shadow:0 0 0 8px #bda27818}
+.keepsake-preview{display:grid;gap:9px}
+.keepsake-preview small{font:900 10px/1.4 var(--sans);letter-spacing:.13em;color:#edc08b}
+.keepsake-preview strong{font:400 clamp(26px,4vw,38px)/1.1 var(--serif);color:#f5e6cb}
+.keepsake-preview em{font:700 11px/1.5 var(--sans);letter-spacing:.08em;color:#a9d0c3}
+.keepsake[open]>summary{border-bottom:0}
+.keepsake-paper{padding:clamp(26px,6vw,62px);background:#efe3ca;color:#26323a;border:1px solid #ba95688c;border-top:0;box-shadow:0 25px 45px #0006}
+.keepsake-paper .eyebrow{color:#905941}
+.keepsake-paper h3{margin:24px 0;font:400 clamp(32px,5.2vw,57px)/1.13 var(--serif);letter-spacing:-.035em}
+.keepsake-paper h3 em{color:#9c6049}
+.keepsake-paper p{font:clamp(18px,2.3vw,23px)/1.6 var(--serif);margin:23px 0}
+.keepsake-signature{display:block;margin:30px 0;font:900 12px var(--sans);letter-spacing:.18em}
+.keepsake-save{width:auto;min-height:48px;color:#f8ebd6}
+@media(max-width:750px){
+ .cover-bottom{align-items:center}
+ .mission-status-strip{margin-bottom:19px}
+ .keepsake{margin:65px auto}
+ .keepsake>summary{gap:19px;padding:20px;min-height:128px}
+ .keepsake-seal{flex-basis:58px;height:58px;font-size:32px}
+}
+@media(max-width:500px){
+ .cover h1{font-size:clamp(44px,12vw,63px);overflow-wrap:normal;letter-spacing:-.08em}
+ .cover h1 span{font-size:clamp(56px,14.5vw,76px);letter-spacing:-.085em}
+ .cover-progress{font-size:11px}
+ .mission-status-strip{grid-template-columns:1fr;gap:8px}
+ .mission-status-strip>strong{text-align:left}
+ .mission-meter{grid-column:1}
+ .keepsake>summary{padding:18px 15px;gap:15px}
+ .keepsake-seal{flex:0 0 50px;height:50px}
+ .keepsake-preview small{font-size:9px}
+ .keepsake-preview strong{font-size:27px}
+ .keepsake-paper{padding:27px 20px}
+ .keepsake-save{width:100%}
+}
+@media(prefers-reduced-motion:reduce){.mission-meter i{transition:none}}

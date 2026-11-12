@@ -18,6 +18,7 @@ function notify(text){
 }
 function finish(id,{jump=true}={}){
  if(!has(id))save(id);
+ renderExperienceProgress();
  const rid='reward-'+id;
  reveal(rid);
  if(id==='collector')reveal('last-choice');
@@ -36,6 +37,7 @@ $$('.chapter-nav a').forEach(link=>link.addEventListener('click',()=>{
  nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false');
 }));
 const titles={prologue:'PROLOGUE',act1:'ROOFTOP CHASE',act2:'SEA DUEL',act3:'THOUSANDTH BELL',act4:'VESPER HEIST',act5:'FINAL BOSS'};
+let lastRemembered=null;
 function activeSection(){
  const y=window.scrollY+140;
  let active='prologue';
@@ -48,6 +50,10 @@ function activeSection(){
    else a.removeAttribute('aria-current');
  });
  $('#current-act').textContent=titles[active];
+ if(window.scrollY>220 && active!==lastRemembered){
+   lastRemembered=active;
+   try{localStorage.setItem(KEY+'last-act',active)}catch(e){}
+ }
  const max=document.documentElement.scrollHeight-window.innerHeight;
  $('#read-fill').style.width=(max>0?Math.round(Math.min(1,window.scrollY/max)*100):0)+'%';
 }
@@ -91,7 +97,7 @@ function chaseSetup(){
   b.classList.toggle('danger',i!==safe);
   b.classList.remove('selected');
   b.querySelector('small').textContent=i===safe?'GAP OPEN':'CHAIN BLOCKED';
-  b.setAttribute('aria-label',names[i]+(i===safe)+ (i===safe?' open':' blocked'));
+  b.setAttribute('aria-label',names[i]+(i===safe?' lane open':' lane blocked'));
  });
  chaseFeedback.textContent='MOVE! The green lane is safe. 3.5 seconds before the next chain.';
  chase.deadline=performance.now()+3500;
@@ -347,6 +353,7 @@ function confetti(){
 function endStory({jump=true}={}){
  save('ending');
  reveal('birthday-ending');
+ renderExperienceProgress();
  $('#last-skip').hidden=true;
  $$('[data-last]').forEach(b=>b.disabled=true);
  lastFeedback.textContent='He takes off the last gear. Not because Dhanu demanded it, but because he finally understands.';
@@ -397,4 +404,73 @@ document.addEventListener('keydown',e=>{
    activeCombat.action(actions[Number(e.key)-1]);
  }
 });
+
+// --- Gift journey: recover progress without interrupting the canonical story ---
+const missionSteps=[
+ {key:'chase',target:'act1',label:'01 / ROOFTOP RUN'},
+ {key:'sea',target:'act2',label:'02 / SEA DUEL'},
+ {key:'bell',target:'act3',label:'03 / THE BELL'},
+ {key:'vault',target:'act4',label:'04 / VESPER VAULT'},
+ {key:'collector',target:'act5',label:'05 / FINAL DUEL'}
+];
+function savedBookmark(){
+ try{
+  const id=localStorage.getItem(KEY+'last-act');
+  return ['act1','act2','act3','act4','act5'].includes(id)?id:null;
+ }catch(e){return null}
+}
+function renderExperienceProgress(){
+ const cleared=missionSteps.filter(step=>has(step.key)).length;
+ const next=missionSteps.find(step=>!has(step.key));
+ const progress=$('#missions-completed'),bar=$('#mission-meter-fill');
+ if(progress)progress.textContent=cleared+' / 5 CHALLENGES CLEARED'+(has('ending')?' · MIDNIGHT RESTORED':'');
+ if(bar)bar.style.width=(cleared/5*100)+'%';
+ $('.mission-grid a').forEach((card,index)=>{
+  const step=missionSteps[index];
+  if(!step)return;
+  const done=has(step.key);
+  card.classList.toggle('cleared',done);
+  const state=card.querySelector('.mission-state')||document.createElement('strong');
+  state.className='mission-state';
+  state.textContent=done?'✓ CLEARED':step===next?'◷ NEXT MISSION':'◇ AVAILABLE';
+  if(!state.isConnected)card.appendChild(state);
+ });
+ const clock=$('#story-clock');
+ if(clock)clock.textContent=has('ending')?'12:00':'11:59';
+ const resume=$('#continue-story'),copy=$('#cover-progress');
+ if(!resume)return;
+ if(has('ending')){
+  resume.hidden=false;resume.href='#birthday-ending';resume.textContent='REVISIT THE ENDING ↗';
+  if(copy)copy.textContent='The clock is moving again. Your story is always here.';
+  return;
+ }
+ const bookmark=savedBookmark();
+ if(cleared||bookmark){
+  const nextIndex=next?missionSteps.indexOf(next):4;
+  const lastIndex=bookmark?missionSteps.findIndex(step=>step.target===bookmark):-1;
+  const target=has('collector')?'last-choice':missionSteps[Math.max(nextIndex,lastIndex,0)].target;
+  resume.hidden=false;resume.href='#'+target;
+  resume.textContent=has('collector')?'CONTINUE TO THE FINAL CHOICE ↗':'CONTINUE YOUR ADVENTURE ↗';
+  if(copy)copy.textContent=cleared+' of 5 challenges cleared · Your place is saved on this device.';
+ }else{
+  resume.hidden=true;
+  if(copy)copy.textContent='Your story begins whenever you’re ready.';
+ }
+}
+renderExperienceProgress();
+
+// Keep the signed message as an offline keepsake; no account, API or tracking.
+$('#keep-letter')?.addEventListener('click',()=>{
+ const note=$('#gift-note-content');
+ if(!note)return;
+ const content="MANIFESTO: REWIND — A NOTE FOR DHANU\n\n"+note.innerText.replace(/SAVE THIS NOTE ↓/g,'').trim()+"\n";
+ const file=new Blob([content],{type:'text/plain;charset=utf-8'});
+ const href=URL.createObjectURL(file);
+ const link=document.createElement('a');
+ link.href=href;link.download='A-Note-For-Dhanu.txt';
+ document.body.appendChild(link);link.click();link.remove();
+ setTimeout(()=>URL.revokeObjectURL(href),1000);
+ notify('YOUR NOTE IS READY TO KEEP');
+});
+
 })();

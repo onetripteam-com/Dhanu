@@ -27,8 +27,9 @@
   <h1 id="book-title">MANIFESTO<span>REWIND</span></h1>
   <p class="cover-kicker">THE MISSING MINUTE / DHANU'S STORY</p>
   <p class="cover-deck">The world stopped at <strong>11:59.</strong> The wrong people are keeping it that way. One birthday boy is about to have the most inconvenient night of his life.</p>
-  <div class="cover-actions"><a class="btn btn-primary" href="#prologue">START THE CHAOS <span aria-hidden="true">↗</span></a><a class="btn btn-quiet" href="#episode-map">THE EPISODE MAP ↓</a></div>
-  <div class="cover-bottom"><span>5 EPISODES</span><span>5 PLAYABLE CHALLENGES</span><span>ONE IMPOSSIBLE MIDNIGHT</span></div>
+  <div class="cover-actions"><a class="btn btn-primary" href="#prologue">START THE CHAOS <span aria-hidden="true">↗</span></a><a class="btn btn-resume" href="#act1" id="continue-story" hidden>CONTINUE THE ADVENTURE ↗</a><a class="btn btn-quiet" href="#episode-map">THE EPISODE MAP ↓</a></div>
+  <p class="cover-progress" id="cover-progress" aria-live="polite">Your story begins whenever you're ready.</p>
+  <div class="cover-bottom"><span class="story-watch" aria-label="The story clock"><span aria-hidden="true">◷</span> STORY TIME <strong id="story-clock">11:59</strong></span><span>5 EPISODES</span><span>5 PLAYABLE CHALLENGES</span><span>ONE IMPOSSIBLE MIDNIGHT</span></div>
  </div>
  <figure class="cover-illustration"><img src="@@IMG_COVER@@" alt="Dhanu on a rainlit rooftop reaches toward Nix as a huge clock hangs above the frozen city." fetchpriority="high" decoding="async"><figcaption>LEAD ROLE: DHANU / SUPPORTING CHAOS: EVERYONE ELSE</figcaption></figure>
  <div class="cover-scroll">SCROLL TO ENTER <span aria-hidden="true">↓</span></div>
@@ -37,6 +38,10 @@
 <section class="episode-map wrap" id="episode-map" aria-labelledby="map-title">
  <div class="section-heading"><span class="eyebrow">MISSION SELECT / STORY MODE</span><h2 id="map-title">Five episodes.<br><em>No filler arcs.</em></h2>
  <p>Read, laugh, fight and make the calls. Every challenge has a skip option if you're here for the story. You can revisit any episode at any time.</p></div>
+ <div class="mission-status-strip" aria-label="Adventure progress">
+  <span>THE JOURNEY SO FAR</span><strong id="missions-completed">0 / 5 CHALLENGES CLEARED</strong>
+  <div class="mission-meter" aria-hidden="true"><i id="mission-meter-fill"></i></div>
+ </div>
  <div class="mission-grid">
   <a href="#act1"><span>EP. 01</span><b>THE BIRTHDAY HEIST</b><small>Rooftop chase · Reflex game</small></a>
   <a href="#act2"><span>EP. 02</span><b>THE SHIP THAT FIGHTS BACK</b><small>Deck duel · Combat</small></a>
@@ -262,6 +267,18 @@
    <figure class="cinema"><img src="@@IMG_CREW@@" alt="Dhanu, Sanjay and Siri watch sunrise together, prepared for their next adventure." loading="lazy"><figcaption>THE CREW / STILL TOGETHER WHEN THE CLOCK STARTS</figcaption></figure>
    <div class="final-letter"><span>FROM YOUR PEOPLE</span><p>Happy birthday, bro. Here's to the ridiculous adventures we haven't planned, the tough days you keep showing up for, the jokes that never get old, and the people who'll always pick up when you call. You've got a whole new chapter ahead. Don't let anyone else write it.</p><strong>— SANJAY & THE CREW</strong></div>
    <div class="postcredits"><span>POST-CREDITS SCENE</span><p>Nix discovers a second sealed envelope. It says: <em>"FOR NIX. PAYMENT ENCLOSED."</em></p><p>He opens it. Inside is a single seed.</p><div class="dialogue-box nix"><span class="speaker">NIX</span><p>"I'm going to sue every single one of you."</p></div></div>
+   <details class="keepsake" id="keepsake-letter">
+    <summary><span class="keepsake-seal" aria-hidden="true">✦</span><span class="keepsake-preview"><small>ONE LAST ENVELOPE / AFTER THE CREDITS</small><strong>This one's for you, Dhanu.</strong><em>Open the personal note →</em></span></summary>
+    <div class="keepsake-paper" id="gift-note-content">
+     <span class="eyebrow">NOT A MISSION. JUST A MESSAGE.</span>
+     <h3>Some gifts arrive late.<br><em>Good wishes don't expire.</em></h3>
+     <p>Dhanu, I know this reached you later than I wanted. I could have sent a quick wish and called it a day. But I wanted to give you something you could step into, laugh at, win, and come back to whenever you felt like it.</p>
+     <p>A watch can run out of battery. A minute can slip away. None of that changes how much the people around you want to see you happy, finding your way, and making the next adventure your own.</p>
+     <p>So here's my late-but-never-forgotten birthday wish: may you have ridiculous stories to tell, enough courage for the difficult chapters, and people who will always be there for the next one. No perfect timing needed.</p>
+     <strong class="keepsake-signature">— SANJAY</strong>
+     <button class="btn btn-quiet keepsake-save" id="keep-letter" type="button">SAVE THIS NOTE ↓</button>
+    </div>
+   </details>
    <div class="ending-actions"><a href="#home" class="btn btn-primary">BACK TO THE BEGINNING ↗</a><button type="button" class="btn btn-quiet" id="replay-game">RESET MISSIONS & REPLAY</button></div>
   </div>
  </div>
